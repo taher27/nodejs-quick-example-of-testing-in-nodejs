@@ -1,0 +1,85 @@
+
+> quick-test-example@1.0.0 test
+> mocha
+
+
+
+  Test the weather kit module's basic functionality
+    √ should return true for umbrella test if it is raining
+    √ should return true if suncream is required
+    √ should return true if jumper is required
+    √ should always return true as water is always required
+
+  Test the weather kit module's basic functionality
+    1) should return true for umbrella test if it is raining
+    2) should return true if suncream is required
+    3) should return true if jumper is required
+    4) should always return true as water is always required
+
+  Test that the data fetched from OpenWeatherMap is processed correctly
+    5) Should check fetched data is processed correctly
+    6) Should handle empty response from OpenWeatherMap
+    7) Should handle error response from OpenWeatherMap
+
+  Test that the data fetched from OpenWeatherMap is processed correctly
+    √ Should check fetched data is processed correctly
+
+
+  5 passing (23ms)
+  7 failing
+
+  1) Test the weather kit module's basic functionality
+       should return true for umbrella test if it is raining:
+     ReferenceError: expect is not defined
+      at Context.<anonymous> (test\6c406ecd77.test.js:9:5)
+      at processImmediate (node:internal/timers:471:21)
+  
+
+  2) Test the weather kit module's basic functionality
+       should return true if suncream is required:
+     TypeError: Cannot read properties of undefined (reading 'suncream')
+      at Context.<anonymous> (test\6c406ecd77.test.js:15:26)
+      at processImmediate (node:internal/timers:471:21)
+  
+
+  3) Test the weather kit module's basic functionality
+       should return true if jumper is required:
+     TypeError: Cannot read properties of undefined (reading 'jumper')
+      at Context.<anonymous> (test\6c406ecd77.test.js:21:40)
+      at processImmediate (node:internal/timers:471:21)
+  
+
+  4) Test the weather kit module's basic functionality
+       should always return true as water is always required:
+     ReferenceError: expect is not defined
+      at Context.<anonymous> (test\6c406ecd77.test.js:35:5)
+      at processImmediate (node:internal/timers:471:21)
+  
+
+  5) Test that the data fetched from OpenWeatherMap is processed correctly
+       Should check fetched data is processed correctly:
+     ReferenceError: processWeatherData is not defined
+      at Context.<anonymous> (test\75d10f69f9.test.js:28:27)
+      at processImmediate (node:internal/timers:471:21)
+  
+
+  6) Test that the data fetched from OpenWeatherMap is processed correctly
+       Should handle empty response from OpenWeatherMap:
+     ReferenceError: processWeatherData is not defined
+      at Context.<anonymous> (test\75d10f69f9.test.js:43:27)
+      at processImmediate (node:internal/timers:471:21)
+  
+
+  7) Test that the data fetched from OpenWeatherMap is processed correctly
+       Should handle error response from OpenWeatherMap:
+     ReferenceError: expect is not defined
+      at Context.<anonymous> (test\75d10f69f9.test.js:52:5)
+      at processImmediate (node:internal/timers:471:21)
+  
+
+
+
+[mochawesome] Report JSON saved to C:\Users\Taher Mandapwala\go\src\github.com\nodejs-quick-example-of-testing-in-nodejs\reports\awesome-reports\mochawesome.json
+
+[mochawesome] Report HTML saved to C:\Users\Taher Mandapwala\go\src\github.com\nodejs-quick-example-of-testing-in-nodejs\reports\awesome-reports\mochawesome.html
+

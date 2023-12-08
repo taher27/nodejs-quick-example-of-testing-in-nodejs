@@ -1,0 +1,333 @@
+
+$ npm test >> ./jestTestLogs.txt
+> quick-test-example@1.0.0 test
+> jest
+
+FAIL ./averagteTemp_ca192d32f1.test.js
+  ● Average Temperature Calculator › Valid Inputs › should return the average temperature
+
+    TypeError: averageTemp is not a function
+
+       9 |   describe('Valid Inputs', () => {
+      10 |     test('should return the average temperature', () => {
+    > 11 |       expect(averageTemp(10, 20)).toBe(15);
+         |              ^
+      12 |       expect(averageTemp(0, 100)).toBe(50);
+      13 |       expect(averageTemp(-10, 10)).toBe(0);
+      14 |     });
+
+      at Object.averageTemp (averagteTemp_ca192d32f1.test.js:11:14)
+
+  ● Average Temperature Calculator › Edge Cases › should return 0 for equal minimum and maximum temperatures
+
+    TypeError: averageTemp is not a function
+
+      17 |   describe('Edge Cases', () => {
+      18 |     test('should return 0 for equal minimum and maximum temperatures', () => {
+    > 19 |       expect(averageTemp(10, 10)).toBe(0);
+         |              ^
+      20 |     });
+      21 |   });
+      22 |
+
+      at Object.averageTemp (averagteTemp_ca192d32f1.test.js:19:14)
+
+FAIL ./processResults_30cabeaee6.test.js
+  ● processResults › should calculate weather data correctly
+
+    ReferenceError: processResults is not defined
+
+      26 |
+      27 |   test('should calculate weather data correctly', () => {
+    > 28 |     const result = processResults(allResults);
+         |                    ^
+      29 |     expect(result.minTemp).toBeCloseTo(9.15);
+      30 |     expect(result.maxTemp).toBeCloseTo(20.15);
+      31 |     expect(result.chanceRain).toBe(0.83);
+
+      at Object.processResults (processResults_30cabeaee6.test.js:28:20)
+
+  ● processResults › should handle missing rain data
+
+    ReferenceError: processResults is not defined
+
+      36 |   test('should handle missing rain data', () => {
+      37 |     delete allResults.rain;
+    > 38 |     const result = processResults(allResults);
+         |                    ^
+      39 |     expect(result.rainFall).toBe(0);
+      40 |   });
+      41 |
+
+      at Object.processResults (processResults_30cabeaee6.test.js:38:20)
+
+  ● processResults › should handle invalid temperature values
+
+    ReferenceError: processResults is not defined
+
+      43 |     allResults.main.temp_min = 'invalid';
+      44 |     allResults.main.temp_max = 'invalid';
+    > 45 |     const result = processResults(allResults);
+         |                    ^
+      46 |     expect(result.minTemp).toBeNaN();
+      47 |     expect(result.maxTemp).toBeNaN();
+      48 |   });
+
+      at Object.processResults (processResults_30cabeaee6.test.js:45:20)
+
+FAIL test/6c406ecd77.test.js
+  ● Test the weather kit module's basic functionality › should return true for umbrella test if it is raining
+
+    TypeError: Cannot read properties of undefined (reading 'umbrella')
+
+       7 | describe("Test the weather kit module's basic functionality", function () {
+       8 |   it("should return true for umbrella test if it is raining", function () {
+    >  9 |     expect(helloWeather.doINeed.umbrella(monday)).to.be.a("boolean");
+         |                                 ^
+      10 |     expect(helloWeather.doINeed.umbrella(tuesday)).equal(false);
+      11 |     expect(helloWeather.doINeed.umbrella(wednesday)).equal(false);
+      12 |     expect(helloWeather.doINeed.umbrella(friday)).equal(true);
+
+      at Object.umbrella (test/6c406ecd77.test.js:9:33)
+
+  ● Test the weather kit module's basic functionality › should return true if suncream is required
+
+    TypeError: Cannot read properties of undefined (reading 'suncream')
+
+      13 |   });
+      14 |   it("should return true if suncream is required", function () {
+    > 15 |     helloWeather.doINeed.suncream(monday).should.be.a("boolean");
+         |                          ^
+      16 |     helloWeather.doINeed.suncream(monday).should.equal(false);
+      17 |     helloWeather.doINeed.suncream(tuesday).should.equal(false);
+      18 |     helloWeather.doINeed.suncream(wednesday).should.equal(true);
+
+      at Object.suncream (test/6c406ecd77.test.js:15:26)
+
+  ● Test the weather kit module's basic functionality › should return true if jumper is required
+
+    TypeError: Cannot read properties of undefined (reading 'jumper')
+
+      19 |   });
+      20 |   it("should return true if jumper is required", function () {
+    > 21 |     assert.typeOf(helloWeather.doINeed.jumper(monday), "boolean");
+         |                                        ^
+      22 |     assert.typeOf(
+      23 |       helloWeather.doINeed.jumper(tuesday),
+      24 |       "boolean",
+
+      at Object.jumper (test/6c406ecd77.test.js:21:40)
+
+  ● Test the weather kit module's basic functionality › should always return true as water is always required
+
+    TypeError: Cannot read properties of undefined (reading 'water')
+
+      33 |   });
+      34 |   it("should always return true as water is always required", function () {
+    > 35 |     expect(helloWeather.doINeed.water(monday)).equal(true);
+         |                                 ^
+      36 |   });
+      37 | });
+      38 |
+
+      at Object.water (test/6c406ecd77.test.js:35:33)
+
+FAIL ./getRainFall_76e9e0bca8.test.js
+  ● Test suite failed to run
+
+    Jest encountered an unexpected token
+
+    Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.
+
+    Out of the box Jest supports Babel, which will be used to transform your files into valid JS based on your Babel configuration.
+
+    By default "node_modules" folder is ignored by transformers.
+
+    Here's what you can do:
+     • If you are trying to use ECMAScript Modules, see https://jestjs.io/docs/ecmascript-modules for how to enable it.
+     • If you are trying to use TypeScript, see https://jestjs.io/docs/getting-started#using-typescript
+     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
+     • If you need a custom transformation specify a "transform" option in your config.
+     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+
+    You'll find more details and examples of these config options in the docs:
+    https://jestjs.io/docs/configuration
+    For information about custom transformations, see:
+    https://jestjs.io/docs/code-transformation
+
+    Details:
+
+    C:\Users\Taher Mandapwala\go\src\github.com\nodejs-quick-example-of-testing-in-nodejs\getRainFall_76e9e0bca8.test.js:5
+    import { getRainFall } from './fetch-weather';
+    ^^^^^^
+
+    SyntaxError: Cannot use import statement outside a module
+
+      at Runtime.createScriptFromCode (node_modules/jest-runtime/build/index.js:1505:14)
+
+FAIL ./kelvinToCelcius_5ac945d542.test.js
+  ● Kelvin to Celsius Conversion › Converts Kelvin to Celsius correctly
+
+    TypeError: kelvinToCelcius is not a function
+
+      10 |     const kelvinTemp = 298;
+      11 |     const expectedCelciusTemp = 25;
+    > 12 |     expect(kelvinToCelcius(kelvinTemp)).toBe(expectedCelciusTemp);
+         |            ^
+      13 |   });
+      14 |
+      15 |   // Test case 2: Edge case - Temperature at absolute zero
+
+      at Object.kelvinToCelcius (kelvinToCelcius_5ac945d542.test.js:12:12)
+
+  ● Kelvin to Celsius Conversion › Handles absolute zero conversion correctly
+
+    TypeError: kelvinToCelcius is not a function
+
+      17 |     const kelvinTemp = 0;
+      18 |     const expectedCelciusTemp = -273;
+    > 19 |     expect(kelvinToCelcius(kelvinTemp)).toBe(expectedCelciusTemp);
+         |            ^
+      20 |   });
+      21 |
+      22 |   // Test case 3: Error handling - Non-numeric input
+
+      at Object.kelvinToCelcius (kelvinToCelcius_5ac945d542.test.js:19:12)
+
+  ● Kelvin to Celsius Conversion › Throws error for non-numeric input
+
+    expect(received).toThrowError(expected)
+
+    Expected substring: "Invalid temperature value. Please provide a numeric value in Kelvin."
+    Received message:   "kelvinToCelcius is not a function"
+
+          24 |     const invalidTemp = 'abc';
+          25 |     expect(() => {
+        > 26 |       kelvinToCelcius(invalidTemp);
+             |       ^
+          27 |     }).toThrowError('Invalid temperature value. Please provide a numeric value in Kelvin.');
+          28 |   });
+          29 | });
+
+      at kelvinToCelcius (kelvinToCelcius_5ac945d542.test.js:26:7)
+      at Object.<anonymous> (node_modules/expect/build/toThrowMatchers.js:74:11)
+      at Object.throwingMatcher [as toThrowError] (node_modules/expect/build/index.js:320:21)
+      at Object.toThrowError (kelvinToCelcius_5ac945d542.test.js:27:8)
+      at Object.toThrowError (kelvinToCelcius_5ac945d542.test.js:27:8)
+
+FAIL ./fetchWeather_2ec6f97b3f.test.js
+  ● fetchWeather › should return weather data for a valid location
+
+    TypeError: request.mockImplementation is not a function
+
+       9 |   // Mock the request function to control the response
+      10 |   beforeEach(() => {
+    > 11 |     request.mockImplementation((options, callback) => {
+         |             ^
+      12 |       callback(null, { statusCode: 200 }, {
+      13 |         weather: [{ description: 'Clear' }]
+      14 |       });
+
+      at Object.mockImplementation (fetchWeather_2ec6f97b3f.test.js:11:13)
+
+  ● fetchWeather › should handle errors and return an empty object
+
+    TypeError: request.mockImplementation is not a function
+
+       9 |   // Mock the request function to control the response
+      10 |   beforeEach(() => {
+    > 11 |     request.mockImplementation((options, callback) => {
+         |             ^
+      12 |       callback(null, { statusCode: 200 }, {
+      13 |         weather: [{ description: 'Clear' }]
+      14 |       });
+
+      at Object.mockImplementation (fetchWeather_2ec6f97b3f.test.js:11:13)
+
+FAIL ./printLine_a459837dee.test.js
+  ● Test suite failed to run
+
+    TypeError: cli.parse is not a function
+
+      12 |     { name: "location", alias: "l", type: String, defaultValue: "London" }
+      13 | ]);
+    > 14 | var location = cli.parse().location;
+         |                    ^
+      15 |
+      16 | /* Fetch weather data */
+      17 | fetchWeather.fetchWeather(location,
+
+      at Object.parse (app.js:14:20)
+      at Object.require (printLine_a459837dee.test.js:7:13)
+
+FAIL test/75d10f69f9.test.js
+  ● Test that the data fetched from OpenWeatherMap is processed correctly › Should check fetched data is processed correctly
+
+    ReferenceError: processWeatherData is not defined
+
+      26 |     callback.withArgs("London").returns(rawWeatherData);
+      27 |
+    > 28 |     const processedData = processWeatherData(callback);
+         |                           ^
+      29 |
+      30 |     expect(processedData).toEqual({
+      31 |       city: "London",
+
+      at Object.processWeatherData (test/75d10f69f9.test.js:28:27)
+
+  ● Test that the data fetched from OpenWeatherMap is processed correctly › Should handle empty response from OpenWeatherMap
+
+    ReferenceError: processWeatherData is not defined
+
+      41 |     callback.withArgs("London").returns(null);
+      42 |
+    > 43 |     const processedData = processWeatherData(callback);
+         |                           ^
+      44 |
+      45 |     expect(processedData).toBeNull();
+      46 |   });
+
+      at Object.processWeatherData (test/75d10f69f9.test.js:43:27)
+
+  ● Test that the data fetched from OpenWeatherMap is processed correctly › Should handle error response from OpenWeatherMap
+
+    expect(received).toThrowError(expected)
+
+    Expected substring: "Error fetching weather data"
+    Received message:   "processWeatherData is not defined"
+
+          50 |     callback.withArgs("London").throws(new Error("Error fetching weather data"));
+          51 |
+        > 52 |     expect(() => processWeatherData(callback)).toThrowError("Error fetching weather data");
+             |                  ^
+          53 |   });
+          54 | });
+          55 |
+
+      at processWeatherData (test/75d10f69f9.test.js:52:18)
+      at Object.<anonymous> (node_modules/expect/build/toThrowMatchers.js:74:11)
+      at Object.throwingMatcher [as toThrowError] (node_modules/expect/build/index.js:320:21)
+      at Object.toThrowError (test/75d10f69f9.test.js:52:48)
+      at Object.toThrowError (test/75d10f69f9.test.js:52:48)
+
+FAIL ./dc35180642.test.js
+  ● Test suite failed to run
+
+    TypeError: cli.parse is not a function
+
+      12 |     { name: "location", alias: "l", type: String, defaultValue: "London" }
+      13 | ]);
+    > 14 | var location = cli.parse().location;
+         |                    ^
+      15 |
+      16 | /* Fetch weather data */
+      17 | fetchWeather.fetchWeather(location,
+
+      at Object.parse (app.js:14:20)
+      at Object.require (dc35180642.test.js:5:13)
+
+Test Suites: 9 failed, 9 total
+Tests:       17 failed, 6 passed, 23 total
+Snapshots:   0 total
+Time:        2.304 s
+Ran all test suites.
