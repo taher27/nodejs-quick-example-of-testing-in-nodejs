@@ -1,0 +1,832 @@
+[2/14/2024, 11:08:12 AM] - [DEBUG] - Successfully created directory C:\var\tmp\Roost\RoostGPT\checkJestConfigChanges\1707889092
+[2/14/2024, 11:08:12 AM] - [DEBUG] - Environment variables have been written to C:\var\tmp\Roost\RoostGPT\checkJestConfigChanges\1707889092\1707889092.env
+[2/14/2024, 11:08:12 AM] - [DEBUG] - Public IP Address: 103.86.18.248
+[2/14/2024, 11:08:13 AM] - [INFO] - License is verified.
+[2/14/2024, 11:08:13 AM] - [INFO] - OpenAI Token is verified
+[2/14/2024, 11:08:13 AM] - [INFO] - Git Token is verified
+[2/14/2024, 11:08:13 AM] - [INFO] - Successfully fetched user email 34998783+taher27@users.noreply.github.com
+[2/14/2024, 11:08:13 AM] - [INFO] - Cloning the repo nodejs-quick-example-of-testing-in-nodejs using url https://taher27:REDACT_TOKEN@github.com/taher27/nodejs-quick-example-of-testing-in-nodejs.git
+[2/14/2024, 11:08:15 AM] - [INFO] - Successfully cloned repo nodejs-quick-example-of-testing-in-nodejs
+[2/14/2024, 11:08:16 AM] - [INFO] - Successfully add git config
+[2/14/2024, 11:08:17 AM] - [INFO] - Successfully checkedout to new branch roost-1707889092
+[2/14/2024, 11:08:18 AM] - [DEBUG] - Public IP Address: 103.238.109.0
+[2/14/2024, 11:08:19 AM] - [INFO] - License is invoked.
+? Want to provide additional input to generate tests (default: Yes)? No
+[2/14/2024, 11:08:19 AM] - [INFO] - Generating test case for the file weather\app.js
+[2/14/2024, 11:08:19 AM] - [DEBUG] - No jest config found, creating a new one
+[2/14/2024, 11:08:19 AM] - [DEBUG] - Successfully created directory C:\var\tmp\Roost\RoostGPT\checkJestConfigChanges\1707889092\source\nodejs-quick-example-of-testing-in-nodejs\weather\__tests__
+[2/14/2024, 11:08:19 AM] - [DEBUG] - Created __tests__ directory.
+[2/14/2024, 11:08:19 AM] - [DEBUG] - dest path:  weather\__tests__
+[2/14/2024, 11:08:19 AM] - [DEBUG] - Successfully created directory weather\__tests__
+[2/14/2024, 11:08:19 AM] - [INTERNAL] - nodejs unit test prompt
+
+
+  CONTEXT:
+    - You are a an expert software developer working on a Node.js project. Your task is to write test cases using Mocha, a popular testing framework for JavaScript applications.
+
+
+  INSTRUCTIONS:
+    - Write at least 2 test cases to ensure the method is working correctly.
+  - Write a test suite using the describe function to group related test cases.
+  - Within the test suite, write multiple test cases using the "test" function to define individual test scenarios.
+  - Use appropriate assertions from the "expect" function to check the expected behavior and outcomes of your code.
+  - Ensure that each test case is independent and isolated from others.
+  - Use the "beforeEach", or "afterEach" functions to set up any necessary preconditions or clean-up tasks.
+  - Ensure that your code is Nodejs compilable and follows good coding practices.
+
+
+  - The unit test files should reside within the weather\__tests__ directory, relative the root directory of the project.
+  - ***Very Important***: The module file being tested is located at weather relative to the root level of the project. All the other files that will be required for the modlue will be in present relative to th
+is directory as well.
+  - ***Very Important***: Import statements in the unit test files should accurately reflect the relative path between weather\__tests__ and weather, ensuring the source files can be properly imported and teste
+d.
+  - ***Very Important***: To accurately reflect the project's directory structure, all relative imports must be calculated from the location of the test file to the actual source file. Particularly, if the sour
+ce file is not directly in weather but in a nested directory, the import statement should be adjusted accordingly.
+  - ***Very Important***: Ensure that the import statements in the generated test files reflect the correct path to the modules they are testing.
+
+  TASK:
+   - I will provide you a method below and it is your job to write a test case for the Nodejs method.
+ - Your job is to create a test suite that covers all possible scenarios, including success and failure cases, edge cases, and error handling.
+ - This is the file name app.js of the method for which you have to write test, the test file and actual file are in same folder.
+ - The method you need to create Mocha unit test case is called:
+
+fetchWeather.fetchWeather(location, function (today) {
+  var weatherKit = [{
+    'name': 'Umbrella',
+    'value': prepareForWeather.doINeed.umbrella(today)
+  }, {
+    'name': 'Suncream',
+    'value': prepareForWeather.doINeed.suncream(today)
+  }, {
+    'name': 'Jumper',
+    'value': prepareForWeather.doINeed.jumper(today)
+  }, {
+    'name': 'Water',
+    'value': prepareForWeather.doINeed.water(today)
+  }];
+  for (key in weatherKit) {
+    printLine(weatherKit[key].value, weatherKit[key].name);
+  }
+})
+
+[2/14/2024, 11:08:19 AM] - [INTERNAL] - systemContent: Write code without any explanation, and write code in code block
+[2/14/2024, 11:08:19 AM] - [INTERNAL] - userContent:
+  CONTEXT:
+    - You are a an expert software developer working on a Node.js project. Your task is to write test cases using Mocha, a popular testing framework for JavaScript applications.
+
+
+  INSTRUCTIONS:
+    - Write at least 2 test cases to ensure the method is working correctly.
+  - Write a test suite using the describe function to group related test cases.
+  - Within the test suite, write multiple test cases using the "test" function to define individual test scenarios.
+  - Use appropriate assertions from the "expect" function to check the expected behavior and outcomes of your code.
+  - Ensure that each test case is independent and isolated from others.
+  - Use the "beforeEach", or "afterEach" functions to set up any necessary preconditions or clean-up tasks.
+  - Ensure that your code is Nodejs compilable and follows good coding practices.
+
+
+  - The unit test files should reside within the weather\__tests__ directory, relative the root directory of the project.
+  - ***Very Important***: The module file being tested is located at weather relative to the root level of the project. All the other files that will be required for the modlue will be in present relative to th
+is directory as well.
+  - ***Very Important***: Import statements in the unit test files should accurately reflect the relative path between weather\__tests__ and weather, ensuring the source files can be properly imported and teste
+d.
+  - ***Very Important***: To accurately reflect the project's directory structure, all relative imports must be calculated from the location of the test file to the actual source file. Particularly, if the sour
+ce file is not directly in weather but in a nested directory, the import statement should be adjusted accordingly.
+  - ***Very Important***: Ensure that the import statements in the generated test files reflect the correct path to the modules they are testing.
+
+  TASK:
+   - I will provide you a method below and it is your job to write a test case for the Nodejs method.
+ - Your job is to create a test suite that covers all possible scenarios, including success and failure cases, edge cases, and error handling.
+ - This is the file name app.js of the method for which you have to write test, the test file and actual file are in same folder.
+ - The method you need to create Mocha unit test case is called:
+
+fetchWeather.fetchWeather(location, function (today) {
+  var weatherKit = [{
+    'name': 'Umbrella',
+    'value': prepareForWeather.doINeed.umbrella(today)
+  }, {
+    'name': 'Suncream',
+    'value': prepareForWeather.doINeed.suncream(today)
+  }, {
+    'name': 'Jumper',
+    'value': prepareForWeather.doINeed.jumper(today)
+  }, {
+    'name': 'Water',
+    'value': prepareForWeather.doINeed.water(today)
+  }];
+  for (key in weatherKit) {
+    printLine(weatherKit[key].value, weatherKit[key].name);
+  }
+})
+
+[2/14/2024, 11:08:19 AM] - [DEBUG] - sleeping for 10 seconds
+[2/14/2024, 11:08:29 AM] - [INTERNAL] - aiTemperature: 0.6, openAiSeedFlag: 1
+[2/14/2024, 11:08:47 AM] - [INTERNAL] -
+Open AI API ResData
+ ```javascript
+const expect = require('chai').expect;
+const fetchWeather = require('../weather/fetchWeather');
+const prepareForWeather = require('../weather/prepareForWeather');
+
+describe('fetchWeather', () => {
+  let today;
+  beforeEach(() => {
+    today = {
+      temp: 25,
+      rain: false,
+      sun: true
+    };
+  });
+
+  it('should prepare correct weather kit for sunny day', (done) => {
+    fetchWeather.fetchWeather('location', function (today) {
+      let weatherKit = [{
+        'name': 'Umbrella',
+        'value': prepareForWeather.doINeed.umbrella(today)
+      }, {
+        'name': 'Suncream',
+        'value': prepareForWeather.doINeed.suncream(today)
+      }, {
+        'name': 'Jumper',
+        'value': prepareForWeather.doINeed.jumper(today)
+      }, {
+        'name': 'Water',
+        'value': prepareForWeather.doINeed.water(today)
+      }];
+      expect(weatherKit[0].value).to.be.false;
+      expect(weatherKit[1].value).to.be.true;
+      expect(weatherKit[2].value).to.be.false;
+      expect(weatherKit[3].value).to.be.true;
+      done();
+    });
+  });
+
+  it('should handle error when location is not valid', (done) => {
+    fetchWeather.fetchWeather('invalid_location', function (error, today) {
+      expect(error).to.not.be.null;
+      expect(today).to.be.undefined;
+      done();
+    });
+  });
+});
+```
+[2/14/2024, 11:08:47 AM] - [DEBUG] -
+Open AI API ParsedData
+ const expect = require('chai').expect;
+const fetchWeather = require('../weather/fetchWeather');
+const prepareForWeather = require('../weather/prepareForWeather');
+
+describe('fetchWeather', () => {
+  let today;
+  beforeEach(() => {
+    today = {
+      temp: 25,
+      rain: false,
+      sun: true
+    };
+  });
+
+  it('should prepare correct weather kit for sunny day', (done) => {
+    fetchWeather.fetchWeather('location', function (today) {
+      let weatherKit = [{
+        'name': 'Umbrella',
+        'value': prepareForWeather.doINeed.umbrella(today)
+      }, {
+        'name': 'Suncream',
+        'value': prepareForWeather.doINeed.suncream(today)
+      }, {
+        'name': 'Jumper',
+        'value': prepareForWeather.doINeed.jumper(today)
+      }, {
+        'name': 'Water',
+        'value': prepareForWeather.doINeed.water(today)
+      }];
+      expect(weatherKit[0].value).to.be.false;
+      expect(weatherKit[1].value).to.be.true;
+      expect(weatherKit[2].value).to.be.false;
+      expect(weatherKit[3].value).to.be.true;
+      done();
+    });
+  });
+
+  it('should handle error when location is not valid', (done) => {
+    fetchWeather.fetchWeather('invalid_location', function (error, today) {
+      expect(error).to.not.be.null;
+      expect(today).to.be.undefined;
+      done();
+    });
+  });
+});
+
+[2/14/2024, 11:08:47 AM] - [INFO] - Successfully written test for method dc35180642 into __tests__\dc35180642.test.js
+[2/14/2024, 11:08:47 AM] - [DEBUG] - prepended comment in test file:  C:\var\tmp\Roost\RoostGPT\checkJestConfigChanges\1707889092\source\nodejs-quick-example-of-testing-in-nodejs\weather\__tests__\dc35180642.te
+st.js
+[2/14/2024, 11:08:47 AM] - [INTERNAL] - Executing the command: jest --showConfig with option {"cwd":"C:\\var\\tmp\\Roost\\RoostGPT\\checkJestConfigChanges\\1707889092\\source\\nodejs-quick-example-of-testing-in
+-nodejs\\weather"}
+[2/14/2024, 11:08:51 AM] - [INTERNAL] - Command: jest --showConfig with option {"cwd":"C:\\var\\tmp\\Roost\\RoostGPT\\checkJestConfigChanges\\1707889092\\source\\nodejs-quick-example-of-testing-in-nodejs\\weath
+er"} Exited with code: 0
+Result: {
+  "configs": [
+    {
+      "automock": false,
+      "cache": true,
+      "cacheDirectory": "C:\\Users\\Taher Mandapwala\\AppData\\Local\\Temp\\jest",
+      "clearMocks": false,
+      "collectCoverageFrom": [],
+      "coverageDirectory": "C:\\var\\tmp\\Roost\\RoostGPT\\checkJestConfigChanges\\1707889092\\source\\nodejs-quick-example-of-testing-in-nodejs\\weather\\coverage",
+      "coveragePathIgnorePatterns": [
+        "\\\\node_modules\\\\"
+      ],
+      "cwd": "C:\\var\\tmp\\Roost\\RoostGPT\\checkJestConfigChanges\\1707889092\\source\\nodejs-quick-example-of-testing-in-nodejs\\weather",
+      "detectLeaks": false,
+      "detectOpenHandles": false,
+      "errorOnDeprecated": false,
+      "extensionsToTreatAsEsm": [],
+      "fakeTimers": {
+        "enableGlobally": false
+      },
+      "forceCoverageMatch": [],
+      "globals": {},
+      "haste": {
+        "computeSha1": false,
+        "enableSymlinks": false,
+        "forceNodeFilesystemAPI": true,
+        "throwOnModuleCollision": false
+      },
+      "id": "a3b4535306c532ba8ba05d7a2a6b7a66",
+      "injectGlobals": true,
+      "moduleDirectories": [
+        "node_modules"
+      ],
+      "moduleFileExtensions": [
+        "js",
+        "jsx",
+        "ts",
+        "tsx"
+      ],
+      "moduleNameMapper": [],
+      "modulePathIgnorePatterns": [],
+      "openHandlesTimeout": 1000,
+      "prettierPath": "prettier",
+      "resetMocks": false,
+      "resetModules": false,
+      "restoreMocks": false,
+      "rootDir": "C:\\var\\tmp\\Roost\\RoostGPT\\checkJestConfigChanges\\1707889092\\source\\nodejs-quick-example-of-testing-in-nodejs\\weather",
+      "roots": [
+        "C:\\var\\tmp\\Roost\\RoostGPT\\checkJestConfigChanges\\1707889092\\source\\nodejs-quick-example-of-testing-in-nodejs\\weather"
+      ],
+      "runner": "C:\\Users\\Taher Mandapwala\\AppData\\Roaming\\nvm\\v20.11.0\\node_modules\\jest\\node_modules\\jest-runner\\build\\index.js",
+      "sandboxInjectedGlobals": [],
+      "setupFiles": [],
+      "setupFilesAfterEnv": [],
+      "skipFilter": false,
+      "slowTestThreshold": 5,
+      "snapshotFormat": {
+        "escapeString": false,
+        "printBasicPrototype": false
+      },
+      "snapshotSerializers": [],
+      "testEnvironment": "C:\\Users\\Taher Mandapwala\\AppData\\Roaming\\nvm\\v20.11.0\\node_modules\\jest\\node_modules\\jest-environment-node\\build\\index.js",
+      "testEnvironmentOptions": {},
+      "testLocationInResults": false,
+      "testMatch": [],
+      "testPathIgnorePatterns": [
+        "\\\\node_modules\\\\"
+      ],
+      "testRegex": [
+        "(\\\\__tests__\\\\.*|(.|\\\\)(test|spec)).(jsx?|tsx?)$"
+      ],
+      "testRunner": "C:\\Users\\Taher Mandapwala\\AppData\\Roaming\\nvm\\v20.11.0\\node_modules\\jest\\node_modules\\jest-circus\\runner.js",
+      "transform": [
+        [
+          "^.+.(jsx?|tsx?)$",
+          "C:\\Users\\Taher Mandapwala\\AppData\\Roaming\\nvm\\v20.11.0\\node_modules\\jest\\node_modules\\babel-jest\\build\\index.js",
+          {}
+        ]
+      ],
+      "transformIgnorePatterns": [
+        "\\\\node_modules\\\\",
+        "\\.pnp\\.[^\\\\]+$"
+      ],
+      "watchPathIgnorePatterns": []
+    }
+  ],
+  "globalConfig": {
+    "bail": 0,
+    "changedFilesWithAncestor": false,
+    "ci": false,
+    "collectCoverage": false,
+    "collectCoverageFrom": [],
+    "coverageDirectory": "C:\\var\\tmp\\Roost\\RoostGPT\\checkJestConfigChanges\\1707889092\\source\\nodejs-quick-example-of-testing-in-nodejs\\weather\\coverage",
+    "coverageProvider": "babel",
+    "coverageReporters": [
+      "json",
+      "text",
+      "lcov",
+      "clover"
+    ],
+    "detectLeaks": false,
+    "detectOpenHandles": false,
+    "errorOnDeprecated": false,
+    "expand": false,
+    "findRelatedTests": false,
+    "forceExit": false,
+    "json": false,
+    "lastCommit": false,
+    "listTests": false,
+    "logHeapUsage": false,
+    "maxConcurrency": 5,
+    "maxWorkers": 7,
+    "noStackTrace": false,
+    "nonFlagArgs": [],
+    "notify": false,
+    "notifyMode": "failure-change",
+    "onlyChanged": false,
+    "onlyFailures": false,
+    "openHandlesTimeout": 1000,
+    "passWithNoTests": false,
+    "projects": [],
+    "rootDir": "C:\\var\\tmp\\Roost\\RoostGPT\\checkJestConfigChanges\\1707889092\\source\\nodejs-quick-example-of-testing-in-nodejs\\weather",
+    "runTestsByPath": false,
+    "seed": -34640781,
+    "skipFilter": false,
+    "snapshotFormat": {
+      "escapeString": false,
+      "printBasicPrototype": false
+    },
+    "testFailureExitCode": 1,
+    "testPathPattern": "",
+    "testSequencer": "C:\\Users\\Taher Mandapwala\\AppData\\Roaming\\nvm\\v20.11.0\\node_modules\\jest\\node_modules\\@jest\\test-sequencer\\build\\index.js",
+    "updateSnapshot": "new",
+    "useStderr": false,
+    "watch": false,
+    "watchAll": false,
+    "watchman": true,
+    "workerThreads": false
+  },
+  "version": "29.7.0"
+}
+
+[2/14/2024, 11:08:51 AM] - [DEBUG] - {"configs":[{"automock":false,"cache":true,"cacheDirectory":"C:\\Users\\Taher Mandapwala\\AppData\\Local\\Temp\\jest","clearMocks":false,"collectCoverageFrom":[],"coverageDi
+rectory":"C:\\var\\tmp\\Roost\\RoostGPT\\checkJestConfigChanges\\1707889092\\source\\nodejs-quick-example-of-testing-in-nodejs\\weather\\coverage","coveragePathIgnorePatterns":["\\\\node_modules\\\\"],"cwd":"C:
+\\var\\tmp\\Roost\\RoostGPT\\checkJestConfigChanges\\1707889092\\source\\nodejs-quick-example-of-testing-in-nodejs\\weather","detectLeaks":false,"detectOpenHandles":false,"errorOnDeprecated":false,"extensionsTo
+TreatAsEsm":[],"fakeTimers":{"enableGlobally":false},"forceCoverageMatch":[],"globals":{},"haste":{"computeSha1":false,"enableSymlinks":false,"forceNodeFilesystemAPI":true,"throwOnModuleCollision":false},"id":"
+a3b4535306c532ba8ba05d7a2a6b7a66","injectGlobals":true,"moduleDirectories":["node_modules"],"moduleFileExtensions":["js","jsx","ts","tsx"],"moduleNameMapper":[],"modulePathIgnorePatterns":[],"openHandlesTimeout
+":1000,"prettierPath":"prettier","resetMocks":false,"resetModules":false,"restoreMocks":false,"rootDir":"C:\\var\\tmp\\Roost\\RoostGPT\\checkJestConfigChanges\\1707889092\\source\\nodejs-quick-example-of-testin
+g-in-nodejs\\weather","roots":["C:\\var\\tmp\\Roost\\RoostGPT\\checkJestConfigChanges\\1707889092\\source\\nodejs-quick-example-of-testing-in-nodejs\\weather"],"runner":"C:\\Users\\Taher Mandapwala\\AppData\\Ro
+aming\\nvm\\v20.11.0\\node_modules\\jest\\node_modules\\jest-runner\\build\\index.js","sandboxInjectedGlobals":[],"setupFiles":[],"setupFilesAfterEnv":[],"skipFilter":false,"slowTestThreshold":5,"snapshotFormat
+":{"escapeString":false,"printBasicPrototype":false},"snapshotSerializers":[],"testEnvironment":"C:\\Users\\Taher Mandapwala\\AppData\\Roaming\\nvm\\v20.11.0\\node_modules\\jest\\node_modules\\jest-environment-
+node\\build\\index.js","testEnvironmentOptions":{},"testLocationInResults":false,"testMatch":[],"testPathIgnorePatterns":["\\\\node_modules\\\\"],"testRegex":["(\\\\__tests__\\\\.*|(.|\\\\)(test|spec)).(jsx?|ts
+x?)$"],"testRunner":"C:\\Users\\Taher Mandapwala\\AppData\\Roaming\\nvm\\v20.11.0\\node_modules\\jest\\node_modules\\jest-circus\\runner.js","transform":[["^.+.(jsx?|tsx?)$","C:\\Users\\Taher Mandapwala\\AppDat
+a\\Roaming\\nvm\\v20.11.0\\node_modules\\jest\\node_modules\\babel-jest\\build\\index.js",{}]],"transformIgnorePatterns":["\\\\node_modules\\\\","\\.pnp\\.[^\\\\]+$"],"watchPathIgnorePatterns":[]}],"globalConfi
+g":{"bail":0,"changedFilesWithAncestor":false,"ci":false,"collectCoverage":false,"collectCoverageFrom":[],"coverageDirectory":"C:\\var\\tmp\\Roost\\RoostGPT\\checkJestConfigChanges\\1707889092\\source\\nodejs-q
+uick-example-of-testing-in-nodejs\\weather\\coverage","coverageProvider":"babel","coverageReporters":["json","text","lcov","clover"],"detectLeaks":false,"detectOpenHandles":false,"errorOnDeprecated":false,"expa
+nd":false,"findRelatedTests":false,"forceExit":false,"json":false,"lastCommit":false,"listTests":false,"logHeapUsage":false,"maxConcurrency":5,"maxWorkers":7,"noStackTrace":false,"nonFlagArgs":[],"notify":false
+,"notifyMode":"failure-change","onlyChanged":false,"onlyFailures":false,"openHandlesTimeout":1000,"passWithNoTests":false,"projects":[],"rootDir":"C:\\var\\tmp\\Roost\\RoostGPT\\checkJestConfigChanges\\17078890
+92\\source\\nodejs-quick-example-of-testing-in-nodejs\\weather","runTestsByPath":false,"seed":-34640781,"skipFilter":false,"snapshotFormat":{"escapeString":false,"printBasicPrototype":false},"testFailureExitCod
+e":1,"testPathPattern":"","testSequencer":"C:\\Users\\Taher Mandapwala\\AppData\\Roaming\\nvm\\v20.11.0\\node_modules\\jest\\node_modules\\@jest\\test-sequencer\\build\\index.js","updateSnapshot":"new","useStde
+rr":false,"watch":false,"watchAll":false,"watchman":true,"workerThreads":false},"version":"29.7.0"}
+[2/14/2024, 11:08:51 AM] - [INTERNAL] - jest config done
+[2/14/2024, 11:08:51 AM] - [INTERNAL] - jest config extracted[object Object]
+[2/14/2024, 11:08:51 AM] - [INTERNAL] - called regex
+[2/14/2024, 11:08:51 AM] - [DEBUG] - Test directory found: __tests__
+[2/14/2024, 11:08:51 AM] - [DEBUG] - dest path:  weather\__tests__
+[2/14/2024, 11:08:51 AM] - [INTERNAL] - nodejs unit test prompt
+
+
+  CONTEXT:
+    - You are a an expert software developer working on a Node.js project. Your task is to write test cases using Mocha, a popular testing framework for JavaScript applications.
+
+
+  INSTRUCTIONS:
+    - Write at least 2 test cases to ensure the method is working correctly.
+  - Write a test suite using the describe function to group related test cases.
+  - Within the test suite, write multiple test cases using the "test" function to define individual test scenarios.
+  - Use appropriate assertions from the "expect" function to check the expected behavior and outcomes of your code.
+  - Ensure that each test case is independent and isolated from others.
+  - Use the "beforeEach", or "afterEach" functions to set up any necessary preconditions or clean-up tasks.
+  - Ensure that your code is Nodejs compilable and follows good coding practices.
+
+
+  - The unit test files should reside within the weather\__tests__ directory, relative the root directory of the project.
+  - ***Very Important***: The module file being tested is located at weather relative to the root level of the project. All the other files that will be required for the modlue will be in present relative to th
+is directory as well.
+  - ***Very Important***: Import statements in the unit test files should accurately reflect the relative path between weather\__tests__ and weather, ensuring the source files can be properly imported and teste
+d.
+  - ***Very Important***: To accurately reflect the project's directory structure, all relative imports must be calculated from the location of the test file to the actual source file. Particularly, if the sour
+ce file is not directly in weather but in a nested directory, the import statement should be adjusted accordingly.
+  - ***Very Important***: Ensure that the import statements in the generated test files reflect the correct path to the modules they are testing.
+
+  TASK:
+   - I will provide you a method below and it is your job to write a test case for the Nodejs method.
+ - Your job is to create a test suite that covers all possible scenarios, including success and failure cases, edge cases, and error handling.
+ - This is the file name app.js of the method for which you have to write test, the test file and actual file are in same folder.
+ - The method you need to create Mocha unit test case is called:
+
+function printLine(required, text) {
+  if (required) {
+    console.log((String.fromCharCode(10004) + " " + text).green);
+  } else {
+    console.log((String.fromCharCode(10006) + " " + text).red);
+  }
+}
+
+[2/14/2024, 11:08:51 AM] - [INTERNAL] - systemContent: Write code without any explanation, and write code in code block
+[2/14/2024, 11:08:51 AM] - [INTERNAL] - userContent:
+  CONTEXT:
+    - You are a an expert software developer working on a Node.js project. Your task is to write test cases using Mocha, a popular testing framework for JavaScript applications.
+
+
+  INSTRUCTIONS:
+    - Write at least 2 test cases to ensure the method is working correctly.
+  - Write a test suite using the describe function to group related test cases.
+  - Within the test suite, write multiple test cases using the "test" function to define individual test scenarios.
+  - Use appropriate assertions from the "expect" function to check the expected behavior and outcomes of your code.
+  - Ensure that each test case is independent and isolated from others.
+  - Use the "beforeEach", or "afterEach" functions to set up any necessary preconditions or clean-up tasks.
+  - Ensure that your code is Nodejs compilable and follows good coding practices.
+
+
+  - The unit test files should reside within the weather\__tests__ directory, relative the root directory of the project.
+  - ***Very Important***: The module file being tested is located at weather relative to the root level of the project. All the other files that will be required for the modlue will be in present relative to th
+is directory as well.
+  - ***Very Important***: Import statements in the unit test files should accurately reflect the relative path between weather\__tests__ and weather, ensuring the source files can be properly imported and teste
+d.
+  - ***Very Important***: To accurately reflect the project's directory structure, all relative imports must be calculated from the location of the test file to the actual source file. Particularly, if the sour
+ce file is not directly in weather but in a nested directory, the import statement should be adjusted accordingly.
+  - ***Very Important***: Ensure that the import statements in the generated test files reflect the correct path to the modules they are testing.
+
+  TASK:
+   - I will provide you a method below and it is your job to write a test case for the Nodejs method.
+ - Your job is to create a test suite that covers all possible scenarios, including success and failure cases, edge cases, and error handling.
+ - This is the file name app.js of the method for which you have to write test, the test file and actual file are in same folder.
+ - The method you need to create Mocha unit test case is called:
+
+function printLine(required, text) {
+  if (required) {
+    console.log((String.fromCharCode(10004) + " " + text).green);
+  } else {
+    console.log((String.fromCharCode(10006) + " " + text).red);
+  }
+}
+
+[2/14/2024, 11:08:51 AM] - [DEBUG] - sleeping for 10 seconds
+[2/14/2024, 11:09:01 AM] - [INTERNAL] - aiTemperature: 0.6, openAiSeedFlag: 1
+[2/14/2024, 11:09:12 AM] - [INTERNAL] -
+Open AI API ResData
+ ```javascript
+const chai = require('chai');
+const expect = chai.expect;
+const sinon = require('sinon');
+const sinonChai = require("sinon-chai");
+chai.use(sinonChai);
+const app = require('./app');
+
+describe('printLine', function() {
+  let consoleLog;
+
+  beforeEach(function() {
+    consoleLog = sinon.spy(console, 'log');
+  });
+
+  afterEach(function() {
+    console.log.restore();
+  });
+
+  it('should print text with checkmark and green color if required is true', function() {
+    app.printLine(true, 'Test text');
+    expect(consoleLog).to.have.been.calledWith('\u2714 Test text');
+  });
+
+  it('should print text with crossmark and red color if required is false', function() {
+    app.printLine(false, 'Test text');
+    expect(consoleLog).to.have.been.calledWith('\u2716 Test text');
+  });
+});
+```
+[2/14/2024, 11:09:12 AM] - [DEBUG] -
+Open AI API ParsedData
+ const chai = require('chai');
+const expect = chai.expect;
+const sinon = require('sinon');
+const sinonChai = require("sinon-chai");
+chai.use(sinonChai);
+const app = require('./app');
+
+describe('printLine', function() {
+  let consoleLog;
+
+  beforeEach(function() {
+    consoleLog = sinon.spy(console, 'log');
+  });
+
+  afterEach(function() {
+    console.log.restore();
+  });
+
+  it('should print text with checkmark and green color if required is true', function() {
+    app.printLine(true, 'Test text');
+    expect(consoleLog).to.have.been.calledWith('\u2714 Test text');
+  });
+
+  it('should print text with crossmark and red color if required is false', function() {
+    app.printLine(false, 'Test text');
+    expect(consoleLog).to.have.been.calledWith('\u2716 Test text');
+  });
+});
+
+[2/14/2024, 11:09:12 AM] - [INFO] - Successfully written test for method printLine_a459837dee into __tests__\printLine_a459837dee.test.js
+[2/14/2024, 11:09:12 AM] - [DEBUG] - prepended comment in test file:  C:\var\tmp\Roost\RoostGPT\checkJestConfigChanges\1707889092\source\nodejs-quick-example-of-testing-in-nodejs\weather\__tests__\printLine_a45
+9837dee.test.js
+[2/14/2024, 11:09:12 AM] - [INFO] - Generating test case for the file weather\fetch-weather.js
+[2/14/2024, 11:09:12 AM] - [INTERNAL] - Executing the command: jest --showConfig with option {"cwd":"C:\\var\\tmp\\Roost\\RoostGPT\\checkJestConfigChanges\\1707889092\\source\\nodejs-quick-example-of-testing-in
+-nodejs\\weather"}
+[2/14/2024, 11:09:12 AM] - [INTERNAL] - Command: jest --showConfig with option {"cwd":"C:\\var\\tmp\\Roost\\RoostGPT\\checkJestConfigChanges\\1707889092\\source\\nodejs-quick-example-of-testing-in-nodejs\\weath
+er"} Exited with code: 0
+Result: {
+  "configs": [
+    {
+      "automock": false,
+      "cache": true,
+      "cacheDirectory": "C:\\Users\\Taher Mandapwala\\AppData\\Local\\Temp\\jest",
+      "clearMocks": false,
+      "collectCoverageFrom": [],
+      "coverageDirectory": "C:\\var\\tmp\\Roost\\RoostGPT\\checkJestConfigChanges\\1707889092\\source\\nodejs-quick-example-of-testing-in-nodejs\\weather\\coverage",
+      "coveragePathIgnorePatterns": [
+        "\\\\node_modules\\\\"
+      ],
+      "cwd": "C:\\var\\tmp\\Roost\\RoostGPT\\checkJestConfigChanges\\1707889092\\source\\nodejs-quick-example-of-testing-in-nodejs\\weather",
+      "detectLeaks": false,
+      "detectOpenHandles": false,
+      "errorOnDeprecated": false,
+      "extensionsToTreatAsEsm": [],
+      "fakeTimers": {
+        "enableGlobally": false
+      },
+      "forceCoverageMatch": [],
+      "globals": {},
+      "haste": {
+        "computeSha1": false,
+        "enableSymlinks": false,
+        "forceNodeFilesystemAPI": true,
+        "throwOnModuleCollision": false
+      },
+      "id": "a3b4535306c532ba8ba05d7a2a6b7a66",
+      "injectGlobals": true,
+      "moduleDirectories": [
+        "node_modules"
+      ],
+      "moduleFileExtensions": [
+        "js",
+        "jsx",
+        "ts",
+        "tsx"
+      ],
+      "moduleNameMapper": [],
+      "modulePathIgnorePatterns": [],
+      "openHandlesTimeout": 1000,
+      "prettierPath": "prettier",
+      "resetMocks": false,
+      "resetModules": false,
+      "restoreMocks": false,
+      "rootDir": "C:\\var\\tmp\\Roost\\RoostGPT\\checkJestConfigChanges\\1707889092\\source\\nodejs-quick-example-of-testing-in-nodejs\\weather",
+      "roots": [
+        "C:\\var\\tmp\\Roost\\RoostGPT\\checkJestConfigChanges\\1707889092\\source\\nodejs-quick-example-of-testing-in-nodejs\\weather"
+      ],
+      "runner": "C:\\Users\\Taher Mandapwala\\AppData\\Roaming\\nvm\\v20.11.0\\node_modules\\jest\\node_modules\\jest-runner\\build\\index.js",
+      "sandboxInjectedGlobals": [],
+      "setupFiles": [],
+      "setupFilesAfterEnv": [],
+      "skipFilter": false,
+      "slowTestThreshold": 5,
+      "snapshotFormat": {
+        "escapeString": false,
+        "printBasicPrototype": false
+      },
+      "snapshotSerializers": [],
+      "testEnvironment": "C:\\Users\\Taher Mandapwala\\AppData\\Roaming\\nvm\\v20.11.0\\node_modules\\jest\\node_modules\\jest-environment-node\\build\\index.js",
+      "testEnvironmentOptions": {},
+      "testLocationInResults": false,
+      "testMatch": [],
+      "testPathIgnorePatterns": [
+        "\\\\node_modules\\\\"
+      ],
+      "testRegex": [
+        "(\\\\__tests__\\\\.*|(.|\\\\)(test|spec)).(jsx?|tsx?)$"
+      ],
+      "testRunner": "C:\\Users\\Taher Mandapwala\\AppData\\Roaming\\nvm\\v20.11.0\\node_modules\\jest\\node_modules\\jest-circus\\runner.js",
+      "transform": [
+        [
+          "^.+.(jsx?|tsx?)$",
+          "C:\\Users\\Taher Mandapwala\\AppData\\Roaming\\nvm\\v20.11.0\\node_modules\\jest\\node_modules\\babel-jest\\build\\index.js",
+          {}
+        ]
+      ],
+      "transformIgnorePatterns": [
+        "\\\\node_modules\\\\",
+        "\\.pnp\\.[^\\\\]+$"
+      ],
+      "watchPathIgnorePatterns": []
+    }
+  ],
+  "globalConfig": {
+    "bail": 0,
+    "changedFilesWithAncestor": false,
+    "ci": false,
+    "collectCoverage": false,
+    "collectCoverageFrom": [],
+    "coverageDirectory": "C:\\var\\tmp\\Roost\\RoostGPT\\checkJestConfigChanges\\1707889092\\source\\nodejs-quick-example-of-testing-in-nodejs\\weather\\coverage",
+    "coverageProvider": "babel",
+    "coverageReporters": [
+      "json",
+      "text",
+      "lcov",
+      "clover"
+    ],
+    "detectLeaks": false,
+    "detectOpenHandles": false,
+    "errorOnDeprecated": false,
+    "expand": false,
+    "findRelatedTests": false,
+    "forceExit": false,
+    "json": false,
+    "lastCommit": false,
+    "listTests": false,
+    "logHeapUsage": false,
+    "maxConcurrency": 5,
+    "maxWorkers": 7,
+    "noStackTrace": false,
+    "nonFlagArgs": [],
+    "notify": false,
+    "notifyMode": "failure-change",
+    "onlyChanged": false,
+    "onlyFailures": false,
+    "openHandlesTimeout": 1000,
+    "passWithNoTests": false,
+    "projects": [],
+    "rootDir": "C:\\var\\tmp\\Roost\\RoostGPT\\checkJestConfigChanges\\1707889092\\source\\nodejs-quick-example-of-testing-in-nodejs\\weather",
+    "runTestsByPath": false,
+    "seed": -1526410958,
+    "skipFilter": false,
+    "snapshotFormat": {
+      "escapeString": false,
+      "printBasicPrototype": false
+    },
+    "testFailureExitCode": 1,
+    "testPathPattern": "",
+    "testSequencer": "C:\\Users\\Taher Mandapwala\\AppData\\Roaming\\nvm\\v20.11.0\\node_modules\\jest\\node_modules\\@jest\\test-sequencer\\build\\index.js",
+    "updateSnapshot": "new",
+    "useStderr": false,
+    "watch": false,
+    "watchAll": false,
+    "watchman": true,
+    "workerThreads": false
+  },
+  "version": "29.7.0"
+}
+
+[2/14/2024, 11:09:12 AM] - [DEBUG] - {"configs":[{"automock":false,"cache":true,"cacheDirectory":"C:\\Users\\Taher Mandapwala\\AppData\\Local\\Temp\\jest","clearMocks":false,"collectCoverageFrom":[],"coverageDi
+rectory":"C:\\var\\tmp\\Roost\\RoostGPT\\checkJestConfigChanges\\1707889092\\source\\nodejs-quick-example-of-testing-in-nodejs\\weather\\coverage","coveragePathIgnorePatterns":["\\\\node_modules\\\\"],"cwd":"C:
+\\var\\tmp\\Roost\\RoostGPT\\checkJestConfigChanges\\1707889092\\source\\nodejs-quick-example-of-testing-in-nodejs\\weather","detectLeaks":false,"detectOpenHandles":false,"errorOnDeprecated":false,"extensionsTo
+TreatAsEsm":[],"fakeTimers":{"enableGlobally":false},"forceCoverageMatch":[],"globals":{},"haste":{"computeSha1":false,"enableSymlinks":false,"forceNodeFilesystemAPI":true,"throwOnModuleCollision":false},"id":"
+a3b4535306c532ba8ba05d7a2a6b7a66","injectGlobals":true,"moduleDirectories":["node_modules"],"moduleFileExtensions":["js","jsx","ts","tsx"],"moduleNameMapper":[],"modulePathIgnorePatterns":[],"openHandlesTimeout
+":1000,"prettierPath":"prettier","resetMocks":false,"resetModules":false,"restoreMocks":false,"rootDir":"C:\\var\\tmp\\Roost\\RoostGPT\\checkJestConfigChanges\\1707889092\\source\\nodejs-quick-example-of-testin
+g-in-nodejs\\weather","roots":["C:\\var\\tmp\\Roost\\RoostGPT\\checkJestConfigChanges\\1707889092\\source\\nodejs-quick-example-of-testing-in-nodejs\\weather"],"runner":"C:\\Users\\Taher Mandapwala\\AppData\\Ro
+aming\\nvm\\v20.11.0\\node_modules\\jest\\node_modules\\jest-runner\\build\\index.js","sandboxInjectedGlobals":[],"setupFiles":[],"setupFilesAfterEnv":[],"skipFilter":false,"slowTestThreshold":5,"snapshotFormat
+":{"escapeString":false,"printBasicPrototype":false},"snapshotSerializers":[],"testEnvironment":"C:\\Users\\Taher Mandapwala\\AppData\\Roaming\\nvm\\v20.11.0\\node_modules\\jest\\node_modules\\jest-environment-
+node\\build\\index.js","testEnvironmentOptions":{},"testLocationInResults":false,"testMatch":[],"testPathIgnorePatterns":["\\\\node_modules\\\\"],"testRegex":["(\\\\__tests__\\\\.*|(.|\\\\)(test|spec)).(jsx?|ts
+x?)$"],"testRunner":"C:\\Users\\Taher Mandapwala\\AppData\\Roaming\\nvm\\v20.11.0\\node_modules\\jest\\node_modules\\jest-circus\\runner.js","transform":[["^.+.(jsx?|tsx?)$","C:\\Users\\Taher Mandapwala\\AppDat
+a\\Roaming\\nvm\\v20.11.0\\node_modules\\jest\\node_modules\\babel-jest\\build\\index.js",{}]],"transformIgnorePatterns":["\\\\node_modules\\\\","\\.pnp\\.[^\\\\]+$"],"watchPathIgnorePatterns":[]}],"globalConfi
+g":{"bail":0,"changedFilesWithAncestor":false,"ci":false,"collectCoverage":false,"collectCoverageFrom":[],"coverageDirectory":"C:\\var\\tmp\\Roost\\RoostGPT\\checkJestConfigChanges\\1707889092\\source\\nodejs-q
+uick-example-of-testing-in-nodejs\\weather\\coverage","coverageProvider":"babel","coverageReporters":["json","text","lcov","clover"],"detectLeaks":false,"detectOpenHandles":false,"errorOnDeprecated":false,"expa
+nd":false,"findRelatedTests":false,"forceExit":false,"json":false,"lastCommit":false,"listTests":false,"logHeapUsage":false,"maxConcurrency":5,"maxWorkers":7,"noStackTrace":false,"nonFlagArgs":[],"notify":false
+,"notifyMode":"failure-change","onlyChanged":false,"onlyFailures":false,"openHandlesTimeout":1000,"passWithNoTests":false,"projects":[],"rootDir":"C:\\var\\tmp\\Roost\\RoostGPT\\checkJestConfigChanges\\17078890
+92\\source\\nodejs-quick-example-of-testing-in-nodejs\\weather","runTestsByPath":false,"seed":-1526410958,"skipFilter":false,"snapshotFormat":{"escapeString":false,"printBasicPrototype":false},"testFailureExitC
+ode":1,"testPathPattern":"","testSequencer":"C:\\Users\\Taher Mandapwala\\AppData\\Roaming\\nvm\\v20.11.0\\node_modules\\jest\\node_modules\\@jest\\test-sequencer\\build\\index.js","updateSnapshot":"new","useSt
+derr":false,"watch":false,"watchAll":false,"watchman":true,"workerThreads":false},"version":"29.7.0"}
+[2/14/2024, 11:09:12 AM] - [INTERNAL] - jest config done
+[2/14/2024, 11:09:12 AM] - [INTERNAL] - jest config extracted[object Object]
+[2/14/2024, 11:09:12 AM] - [INTERNAL] - called regex
+[2/14/2024, 11:09:12 AM] - [DEBUG] - Test directory found: __tests__
+[2/14/2024, 11:09:12 AM] - [DEBUG] - dest path:  weather\__tests__
+[2/14/2024, 11:09:12 AM] - [INTERNAL] - nodejs unit test prompt
+
+
+  CONTEXT:
+    - You are a an expert software developer working on a Node.js project. Your task is to write test cases using Mocha, a popular testing framework for JavaScript applications.
+
+
+  INSTRUCTIONS:
+    - Write at least 2 test cases to ensure the method is working correctly.
+  - Write a test suite using the describe function to group related test cases.
+  - Within the test suite, write multiple test cases using the "test" function to define individual test scenarios.
+  - Use appropriate assertions from the "expect" function to check the expected behavior and outcomes of your code.
+  - Ensure that each test case is independent and isolated from others.
+  - Use the "beforeEach", or "afterEach" functions to set up any necessary preconditions or clean-up tasks.
+  - Ensure that your code is Nodejs compilable and follows good coding practices.
+
+
+  - The unit test files should reside within the weather\__tests__ directory, relative the root directory of the project.
+  - ***Very Important***: The module file being tested is located at weather relative to the root level of the project. All the other files that will be required for the modlue will be in present relative to th
+is directory as well.
+  - ***Very Important***: Import statements in the unit test files should accurately reflect the relative path between weather\__tests__ and weather, ensuring the source files can be properly imported and teste
+d.
+  - ***Very Important***: To accurately reflect the project's directory structure, all relative imports must be calculated from the location of the test file to the actual source file. Particularly, if the sour
+ce file is not directly in weather but in a nested directory, the import statement should be adjusted accordingly.
+  - ***Very Important***: Ensure that the import statements in the generated test files reflect the correct path to the modules they are testing.
+
+  TASK:
+   - I will provide you a method below and it is your job to write a test case for the Nodejs method.
+ - Your job is to create a test suite that covers all possible scenarios, including success and failure cases, edge cases, and error handling.
+ - This is the file name fetch-weather.js of the method for which you have to write test, the test file and actual file are in same folder.
+ - The method you need to create Mocha unit test case is called:
+
+function fetchWeather(location, callback) {
+  var appId = 'aa0f1b0be45dca476178787f941c76dc';
+  var url = 'http://api.openweathermap.org/data/2.5/weather?q=' + location + '&appid=' + appId;
+  request({
+    url: url,
+    json: true
+  }, function (error, response, body) {
+    if (!error && response.statusCode === 200) {
+      callback(processResults(body));
+    }
+  });
+}
+
+[2/14/2024, 11:09:12 AM] - [INTERNAL] - systemContent: Write code without any explanation, and write code in code block
+[2/14/2024, 11:09:12 AM] - [INTERNAL] - userContent:
+  CONTEXT:
+    - You are a an expert software developer working on a Node.js project. Your task is to write test cases using Mocha, a popular testing framework for JavaScript applications.
+
+
+  INSTRUCTIONS:
+    - Write at least 2 test cases to ensure the method is working correctly.
+  - Write a test suite using the describe function to group related test cases.
+  - Within the test suite, write multiple test cases using the "test" function to define individual test scenarios.
+  - Use appropriate assertions from the "expect" function to check the expected behavior and outcomes of your code.
+  - Ensure that each test case is independent and isolated from others.
+  - Use the "beforeEach", or "afterEach" functions to set up any necessary preconditions or clean-up tasks.
+  - Ensure that your code is Nodejs compilable and follows good coding practices.
+
+
+  - The unit test files should reside within the weather\__tests__ directory, relative the root directory of the project.
+  - ***Very Important***: The module file being tested is located at weather relative to the root level of the project. All the other files that will be required for the modlue will be in present relative to th
+is directory as well.
+  - ***Very Important***: Import statements in the unit test files should accurately reflect the relative path between weather\__tests__ and weather, ensuring the source files can be properly imported and teste
+d.
+  - ***Very Important***: To accurately reflect the project's directory structure, all relative imports must be calculated from the location of the test file to the actual source file. Particularly, if the sour
+ce file is not directly in weather but in a nested directory, the import statement should be adjusted accordingly.
+  - ***Very Important***: Ensure that the import statements in the generated test files reflect the correct path to the modules they are testing.
+
+  TASK:
+   - I will provide you a method below and it is your job to write a test case for the Nodejs method.
+ - Your job is to create a test suite that covers all possible scenarios, including success and failure cases, edge cases, and error handling.
+ - This is the file name fetch-weather.js of the method for which you have to write test, the test file and actual file are in same folder.
+ - The method you need to create Mocha unit test case is called:
+
+function fetchWeather(location, callback) {
+  var appId = 'aa0f1b0be45dca476178787f941c76dc';
+  var url = 'http://api.openweathermap.org/data/2.5/weather?q=' + location + '&appid=' + appId;
+  request({
+    url: url,
+    json: true
+  }, function (error, response, body) {
+    if (!error && response.statusCode === 200) {
+      callback(processResults(body));
+    }
+  });
+}
+
+[2/14/2024, 11:09:12 AM] - [DEBUG] - sleeping for 10 seconds
+[2/14/2024, 11:09:22 AM] - [INTERNAL] - aiTemperature: 0.6, openAiSeedFlag: 1
+[2/14/2024, 11:09:36 AM] - [INTERNAL] -
+Open AI API ResData
+ ```javascript
+const expect = require('chai').expect;
+const nock = require('nock');
+const fetchWeather = require('./fetch-weather');
+
+describe('Fetch Weather Tests', () => {
+  beforeEach(() => {
+    nock('http://api.openweathermap.org')
+      .get('/data/2.5/weather?q=London&appid=aa0f1b0be45dca476178787f941c76dc')
+      .reply(200, {
+        location: 'London',
+        temperature: '15°C'
+      });
+  });
+
+  it('Fetches weather successfully', done => {
+    fetchWeather('London', (data) => {
+      expect(data).to.have.property('location');
+      expect(data.location).to.equal('London');
+      expect(data).to.have.property('temperature');
+      done();
+    });
+  });
+
+  it('Handles errors', done => {
+    nock('http://api.openweathermap.org')
+      .get('/data/2.5/weather?q=InvalidLocation&appid=aa0f1b0be45dca476178787f941c76dc')
+      .replyWithError('Something went wrong');
