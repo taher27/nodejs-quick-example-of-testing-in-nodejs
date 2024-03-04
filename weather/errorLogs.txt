@@ -1,0 +1,1088 @@
+Taher Mandapwala@LAPTOP-JV636MDQ MINGW64 ~/go/src/github.com/ZB-io/roost-gpt/nodejs_implementation (ZBIO-4899-2)
+$ node index.js test create -c ~/Downloads/checJestConfigChanges.env
+Using Config Path : C:/Users/Taher Mandapwala/Downloads/checJestConfigChanges.env
+[1/30/2024, 1:30:24 PM] - [WARNING] - No test framework specified, using jest to generate tests.
+[1/30/2024, 1:30:24 PM] - [DEBUG] - Successfully created directory C:\var\tmp\Roost\RoostGPT\checkJestConfigChanges\1706601624
+[1/30/2024, 1:30:24 PM] - [DEBUG] - Environment variables have been written to C:\var\tmp\Roost\RoostGPT\checkJestConfigChanges\1706601624\1706601624.env
+[1/30/2024, 1:30:24 PM] - [DEBUG] - Public IP Address: 103.251.226.113
+[1/30/2024, 1:30:24 PM] - [INFO] - License is verified.
+[1/30/2024, 1:30:25 PM] - [INFO] - OpenAI Token is verified
+[1/30/2024, 1:30:25 PM] - [DEBUG] - Public IP Address: 103.251.226.83
+[1/30/2024, 1:30:26 PM] - [INFO] - License is invoked.
+? Want to provide additional input to generate tests (default: Yes)? No
+[1/30/2024, 1:30:26 PM] - [INFO] - Generating test case for the file weather\app.js
+[1/30/2024, 1:30:26 PM] - [DEBUG] - No jest config found, creating a new one
+[1/30/2024, 1:30:26 PM] - [DEBUG] - Successfully created directory C:\Users\Taher Mandapwala\go\src\github.com\nodejs-quick-example-of-testing-in-nodejs\weather\__tests__
+[1/30/2024, 1:30:26 PM] - [DEBUG] - Created __tests__ directory.
+[1/30/2024, 1:30:26 PM] - [DEBUG] - dest path:  weather\__tests__
+[1/30/2024, 1:30:26 PM] - [DEBUG] - Successfully created directory weather\__tests__
+[1/30/2024, 1:30:26 PM] - [INTERNAL] - nodejs unit test prompt
+
+
+CONTEXT:
+- You are a an expert software developer working on a Node.js project. Your task is to write test cases using Jest, a popular testing framework for JavaScript applications.
+
+INSRUCTIONS:
+- Write at least 2 test cases to ensure the method is working correctly.
+- Write a test suite using the "describe" function to group related test cases.
+- Within the test suite, write multiple test cases using the "test" function to define individual test scenarios.
+- Use appropriate assertions from the "expect" function to check the expected behavior and outcomes of your code.
+- Ensure that each test case is independent and isolated from others.
+- Use the "beforeAll", "beforeEach", "afterAll", or "afterEach" functions to set up any necessary preconditions or clean-up tasks.
+- Ensure that your code is Nodejs compilable and follows good coding practices.
+
+
+- The unit test files should reside within the /weather\__tests__ directory, relative the root directory of the project.
+- ***Very Important***: The module file being tested is located at /weather relative to the root level of the project. All the other files that will be required for the modlue will be in present relative to thi
+s directory as well.
+- ***Very Important***: Import statements in the unit test files should accurately reflect the relative path between /weather\__tests__ and /weather, ensuring the source files can be properly imported and teste
+d.
+- ***Very Important***: To accurately reflect the project's directory structure, all relative imports must be calculated from the location of the test file to the actual source file. Particularly, if the source
+ file is not directly in /weather but in a nested directory, the import statement should be adjusted accordingly.
+- ***Very Important***: Ensure that the import statements in the generated test files reflect the correct path to the modules they are testing.
+
+TASK:
+- I will provide you a method below and it is your job to write a test case for the Nodejs method.
+- Your job is to create a test suite that covers all possible scenarios, including success and failure cases, edge cases, and error handling.
+- This is the file name app.js of the method for which you have to write test, the test file and actual file are in same folder.
+- The method you need to create jest unit test case is called:
+
+fw.fetchWeather(location, function (today) {
+  var weatherKit = [{
+    name: "Umbrella",
+    value: prepareForWeather.doINeed.umbrella(today)
+  }, {
+    name: "Suncream",
+    value: prepareForWeather.doINeed.suncream(today)
+  }, {
+    name: "Jumper",
+    value: prepareForWeather.doINeed.jumper(today)
+  }, {
+    name: "Water",
+    value: prepareForWeather.doINeed.water(today)
+  }];
+  for (let i = 0; i < weatherKit.length; i++) {
+    const key = weatherKit[i];
+    printLine(key.value, key.name);
+  }
+})
+
+[1/30/2024, 1:30:26 PM] - [INTERNAL] - systemContent: Write code without any explanation, and write code in code block
+[1/30/2024, 1:30:26 PM] - [INTERNAL] - userContent:
+CONTEXT:
+- You are a an expert software developer working on a Node.js project. Your task is to write test cases using Jest, a popular testing framework for JavaScript applications.
+
+INSRUCTIONS:
+- Write at least 2 test cases to ensure the method is working correctly.
+- Write a test suite using the "describe" function to group related test cases.
+- Within the test suite, write multiple test cases using the "test" function to define individual test scenarios.
+- Use appropriate assertions from the "expect" function to check the expected behavior and outcomes of your code.
+- Ensure that each test case is independent and isolated from others.
+- Use the "beforeAll", "beforeEach", "afterAll", or "afterEach" functions to set up any necessary preconditions or clean-up tasks.
+- Ensure that your code is Nodejs compilable and follows good coding practices.
+
+
+- The unit test files should reside within the /weather\__tests__ directory, relative the root directory of the project.
+- ***Very Important***: The module file being tested is located at /weather relative to the root level of the project. All the other files that will be required for the modlue will be in present relative to thi
+s directory as well.
+- ***Very Important***: Import statements in the unit test files should accurately reflect the relative path between /weather\__tests__ and /weather, ensuring the source files can be properly imported and teste
+d.
+- ***Very Important***: To accurately reflect the project's directory structure, all relative imports must be calculated from the location of the test file to the actual source file. Particularly, if the source
+ file is not directly in /weather but in a nested directory, the import statement should be adjusted accordingly.
+- ***Very Important***: Ensure that the import statements in the generated test files reflect the correct path to the modules they are testing.
+
+TASK:
+- I will provide you a method below and it is your job to write a test case for the Nodejs method.
+- Your job is to create a test suite that covers all possible scenarios, including success and failure cases, edge cases, and error handling.
+- This is the file name app.js of the method for which you have to write test, the test file and actual file are in same folder.
+- The method you need to create jest unit test case is called:
+
+fw.fetchWeather(location, function (today) {
+  var weatherKit = [{
+    name: "Umbrella",
+    value: prepareForWeather.doINeed.umbrella(today)
+  }, {
+    name: "Suncream",
+    value: prepareForWeather.doINeed.suncream(today)
+  }, {
+    name: "Jumper",
+    value: prepareForWeather.doINeed.jumper(today)
+  }, {
+    name: "Water",
+    value: prepareForWeather.doINeed.water(today)
+  }];
+  for (let i = 0; i < weatherKit.length; i++) {
+    const key = weatherKit[i];
+    printLine(key.value, key.name);
+  }
+})
+
+[1/30/2024, 1:30:26 PM] - [DEBUG] - sleeping for 10 seconds
+[1/30/2024, 1:30:36 PM] - [INTERNAL] - aiTemperature: 0.6, openAiSeedFlag: 1
+[1/30/2024, 1:31:10 PM] - [INTERNAL] -
+Open AI API ResData
+ ```javascript
+const fw = require('../app');
+const prepareForWeather = require('../prepareForWeather');
+
+describe('fetchWeather', () => {
+  let mockPrintLine;
+
+  beforeAll(() => {
+    mockPrintLine = jest.fn();
+    global.printLine = mockPrintLine;
+  });
+
+  beforeEach(() => {
+    mockPrintLine.mockClear();
+  });
+
+  test('should correctly fetch weather and prepare kit for sunny day', () => {
+    prepareForWeather.doINeed = {
+      umbrella: jest.fn().mockReturnValue(false),
+      suncream: jest.fn().mockReturnValue(true),
+      jumper: jest.fn().mockReturnValue(false),
+      water: jest.fn().mockReturnValue(true),
+    };
+
+    fw.fetchWeather('London', (today) => {
+      expect(prepareForWeather.doINeed.umbrella).toHaveBeenCalledWith(today);
+      expect(prepareForWeather.doINeed.suncream).toHaveBeenCalledWith(today);
+      expect(prepareForWeather.doINeed.jumper).toHaveBeenCalledWith(today);
+      expect(prepareForWeather.doINeed.water).toHaveBeenCalledWith(today);
+      expect(mockPrintLine).toHaveBeenCalledWith(false, 'Umbrella');
+      expect(mockPrintLine).toHaveBeenCalledWith(true, 'Suncream');
+      expect(mockPrintLine).toHaveBeenCalledWith(false, 'Jumper');
+      expect(mockPrintLine).toHaveBeenCalledWith(true, 'Water');
+    });
+  });
+
+  test('should correctly fetch weather and prepare kit for rainy day', () => {
+    prepareForWeather.doINeed = {
+      umbrella: jest.fn().mockReturnValue(true),
+      suncream: jest.fn().mockReturnValue(false),
+      jumper: jest.fn().mockReturnValue(true),
+      water: jest.fn().mockReturnValue(false),
+    };
+
+    fw.fetchWeather('London', (today) => {
+      expect(prepareForWeather.doINeed.umbrella).toHaveBeenCalledWith(today);
+      expect(prepareForWeather.doINeed.suncream).toHaveBeenCalledWith(today);
+      expect(prepareForWeather.doINeed.jumper).toHaveBeenCalledWith(today);
+      expect(prepareForWeather.doINeed.water).toHaveBeenCalledWith(today);
+      expect(mockPrintLine).toHaveBeenCalledWith(true, 'Umbrella');
+      expect(mockPrintLine).toHaveBeenCalledWith(false, 'Suncream');
+      expect(mockPrintLine).toHaveBeenCalledWith(true, 'Jumper');
+      expect(mockPrintLine).toHaveBeenCalledWith(false, 'Water');
+    });
+  });
+});
+```
+[1/30/2024, 1:31:10 PM] - [DEBUG] -
+Open AI API ParsedData
+ const fw = require('../app');
+const prepareForWeather = require('../prepareForWeather');
+
+describe('fetchWeather', () => {
+  let mockPrintLine;
+
+  beforeAll(() => {
+    mockPrintLine = jest.fn();
+    global.printLine = mockPrintLine;
+  });
+
+  beforeEach(() => {
+    mockPrintLine.mockClear();
+  });
+
+  test('should correctly fetch weather and prepare kit for sunny day', () => {
+    prepareForWeather.doINeed = {
+      umbrella: jest.fn().mockReturnValue(false),
+      suncream: jest.fn().mockReturnValue(true),
+      jumper: jest.fn().mockReturnValue(false),
+      water: jest.fn().mockReturnValue(true),
+    };
+
+    fw.fetchWeather('London', (today) => {
+      expect(prepareForWeather.doINeed.umbrella).toHaveBeenCalledWith(today);
+      expect(prepareForWeather.doINeed.suncream).toHaveBeenCalledWith(today);
+      expect(prepareForWeather.doINeed.jumper).toHaveBeenCalledWith(today);
+      expect(prepareForWeather.doINeed.water).toHaveBeenCalledWith(today);
+      expect(mockPrintLine).toHaveBeenCalledWith(false, 'Umbrella');
+      expect(mockPrintLine).toHaveBeenCalledWith(true, 'Suncream');
+      expect(mockPrintLine).toHaveBeenCalledWith(false, 'Jumper');
+      expect(mockPrintLine).toHaveBeenCalledWith(true, 'Water');
+    });
+  });
+
+  test('should correctly fetch weather and prepare kit for rainy day', () => {
+    prepareForWeather.doINeed = {
+      umbrella: jest.fn().mockReturnValue(true),
+      suncream: jest.fn().mockReturnValue(false),
+      jumper: jest.fn().mockReturnValue(true),
+      water: jest.fn().mockReturnValue(false),
+    };
+
+    fw.fetchWeather('London', (today) => {
+      expect(prepareForWeather.doINeed.umbrella).toHaveBeenCalledWith(today);
+      expect(prepareForWeather.doINeed.suncream).toHaveBeenCalledWith(today);
+      expect(prepareForWeather.doINeed.jumper).toHaveBeenCalledWith(today);
+      expect(prepareForWeather.doINeed.water).toHaveBeenCalledWith(today);
+      expect(mockPrintLine).toHaveBeenCalledWith(true, 'Umbrella');
+      expect(mockPrintLine).toHaveBeenCalledWith(false, 'Suncream');
+      expect(mockPrintLine).toHaveBeenCalledWith(true, 'Jumper');
+      expect(mockPrintLine).toHaveBeenCalledWith(false, 'Water');
+    });
+  });
+});
+
+[1/30/2024, 1:31:10 PM] - [INFO] - Successfully written test for method 96cff84937 into __tests__\96cff84937.test.js
+[1/30/2024, 1:31:10 PM] - [DEBUG] - prepended comment in test file:  C:\Users\Taher Mandapwala\go\src\github.com\nodejs-quick-example-of-testing-in-nodejs\weather\__tests__\96cff84937.test.js
+[1/30/2024, 1:31:10 PM] - [INTERNAL] - Executing the command: jest --showConfig with option {"cwd":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather"}
+[1/30/2024, 1:31:19 PM] - [INTERNAL] - Command: jest --showConfig with option {"cwd":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather"} Exited with code: 0
+Result: {
+  "configs": [
+    {
+      "automock": false,
+      "cache": true,
+      "cacheDirectory": "C:\\Users\\Taher Mandapwala\\AppData\\Local\\Temp\\jest",
+      "clearMocks": false,
+      "collectCoverageFrom": [],
+      "coverageDirectory": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather\\coverage",
+      "coveragePathIgnorePatterns": [
+        "\\\\node_modules\\\\"
+      ],
+      "cwd": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather",
+      "detectLeaks": false,
+      "detectOpenHandles": false,
+      "errorOnDeprecated": false,
+      "extensionsToTreatAsEsm": [],
+      "fakeTimers": {
+        "enableGlobally": false
+      },
+      "forceCoverageMatch": [],
+      "globals": {},
+      "haste": {
+        "computeSha1": false,
+        "enableSymlinks": false,
+        "forceNodeFilesystemAPI": true,
+        "throwOnModuleCollision": false
+      },
+      "id": "8a41f0f12bbfab67af8592677dfebd4c",
+      "injectGlobals": true,
+      "moduleDirectories": [
+        "node_modules"
+      ],
+      "moduleFileExtensions": [
+        "js",
+        "jsx",
+        "ts",
+        "tsx"
+      ],
+      "moduleNameMapper": [],
+      "modulePathIgnorePatterns": [],
+      "openHandlesTimeout": 1000,
+      "prettierPath": "prettier",
+      "resetMocks": false,
+      "resetModules": false,
+      "restoreMocks": false,
+      "rootDir": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather",
+      "roots": [
+        "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather"
+      ],
+      "runner": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\node_modules\\jest-runner\\build\\index.js",
+      "sandboxInjectedGlobals": [],
+      "setupFiles": [],
+      "setupFilesAfterEnv": [],
+      "skipFilter": false,
+      "slowTestThreshold": 5,
+      "snapshotFormat": {
+        "escapeString": false,
+        "printBasicPrototype": false
+      },
+      "snapshotSerializers": [],
+      "testEnvironment": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\node_modules\\jest-environment-node\\build\\index.js",
+      "testEnvironmentOptions": {},
+      "testLocationInResults": false,
+      "testMatch": [],
+      "testPathIgnorePatterns": [
+        "\\\\node_modules\\\\"
+      ],
+      "testRegex": [
+        "(\\\\__tests__\\\\.*|(.|\\\\)(test|spec)).(jsx?|tsx?)$"
+      ],
+      "testRunner": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\node_modules\\jest-circus\\runner.js",
+      "transform": [
+        [
+          "^.+.(jsx?|tsx?)$",
+          "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\node_modules\\babel-jest\\build\\index.js",
+          {}
+        ]
+      ],
+      "transformIgnorePatterns": [
+        "\\\\node_modules\\\\",
+        "\\.pnp\\.[^\\\\]+$"
+      ],
+      "watchPathIgnorePatterns": []
+    }
+  ],
+  "globalConfig": {
+    "bail": 0,
+    "changedFilesWithAncestor": false,
+    "ci": false,
+    "collectCoverage": false,
+    "collectCoverageFrom": [],
+    "coverageDirectory": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather\\coverage",
+    "coverageProvider": "babel",
+    "coverageReporters": [
+      "json",
+      "text",
+      "lcov",
+      "clover"
+    ],
+    "detectLeaks": false,
+    "detectOpenHandles": false,
+    "errorOnDeprecated": false,
+    "expand": false,
+    "findRelatedTests": false,
+    "forceExit": false,
+    "json": false,
+    "lastCommit": false,
+    "listTests": false,
+    "logHeapUsage": false,
+    "maxConcurrency": 5,
+    "maxWorkers": 7,
+    "noStackTrace": false,
+    "nonFlagArgs": [],
+    "notify": false,
+    "notifyMode": "failure-change",
+    "onlyChanged": false,
+    "onlyFailures": false,
+    "openHandlesTimeout": 1000,
+    "passWithNoTests": false,
+    "projects": [],
+    "rootDir": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather",
+    "runTestsByPath": false,
+    "seed": -1404293253,
+    "skipFilter": false,
+    "snapshotFormat": {
+      "escapeString": false,
+      "printBasicPrototype": false
+    },
+    "testFailureExitCode": 1,
+    "testPathPattern": "",
+    "testSequencer": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\node_modules\\@jest\\test-sequencer\\build\\index.js",
+    "updateSnapshot": "new",
+    "useStderr": false,
+    "watch": false,
+    "watchAll": false,
+    "watchman": true,
+    "workerThreads": false
+  },
+  "version": "29.7.0"
+}
+
+[1/30/2024, 1:31:19 PM] - [DEBUG] - {"configs":[{"automock":false,"cache":true,"cacheDirectory":"C:\\Users\\Taher Mandapwala\\AppData\\Local\\Temp\\jest","clearMocks":false,"collectCoverageFrom":[],"coverageDir
+ectory":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather\\coverage","coveragePathIgnorePatterns":["\\\\node_modules\\\\"],"cwd":"C:\\Users\\Taher Mandapwala\
+\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather","detectLeaks":false,"detectOpenHandles":false,"errorOnDeprecated":false,"extensionsToTreatAsEsm":[],"fakeTimers":{"enableGlobally":false
+},"forceCoverageMatch":[],"globals":{},"haste":{"computeSha1":false,"enableSymlinks":false,"forceNodeFilesystemAPI":true,"throwOnModuleCollision":false},"id":"8a41f0f12bbfab67af8592677dfebd4c","injectGlobals":t
+rue,"moduleDirectories":["node_modules"],"moduleFileExtensions":["js","jsx","ts","tsx"],"moduleNameMapper":[],"modulePathIgnorePatterns":[],"openHandlesTimeout":1000,"prettierPath":"prettier","resetMocks":false
+,"resetModules":false,"restoreMocks":false,"rootDir":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather","roots":["C:\\Users\\Taher Mandapwala\\go\\src\\github
+.com\\nodejs-quick-example-of-testing-in-nodejs\\weather"],"runner":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\node_modules\\jest-runner\\build\\index.js","san
+dboxInjectedGlobals":[],"setupFiles":[],"setupFilesAfterEnv":[],"skipFilter":false,"slowTestThreshold":5,"snapshotFormat":{"escapeString":false,"printBasicPrototype":false},"snapshotSerializers":[],"testEnviron
+ment":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\node_modules\\jest-environment-node\\build\\index.js","testEnvironmentOptions":{},"testLocationInResults":fals
+e,"testMatch":[],"testPathIgnorePatterns":["\\\\node_modules\\\\"],"testRegex":["(\\\\__tests__\\\\.*|(.|\\\\)(test|spec)).(jsx?|tsx?)$"],"testRunner":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-q
+uick-example-of-testing-in-nodejs\\node_modules\\jest-circus\\runner.js","transform":[["^.+.(jsx?|tsx?)$","C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\node_modul
+es\\babel-jest\\build\\index.js",{}]],"transformIgnorePatterns":["\\\\node_modules\\\\","\\.pnp\\.[^\\\\]+$"],"watchPathIgnorePatterns":[]}],"globalConfig":{"bail":0,"changedFilesWithAncestor":false,"ci":false,
+"collectCoverage":false,"collectCoverageFrom":[],"coverageDirectory":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather\\coverage","coverageProvider":"babel","
+coverageReporters":["json","text","lcov","clover"],"detectLeaks":false,"detectOpenHandles":false,"errorOnDeprecated":false,"expand":false,"findRelatedTests":false,"forceExit":false,"json":false,"lastCommit":fal
+se,"listTests":false,"logHeapUsage":false,"maxConcurrency":5,"maxWorkers":7,"noStackTrace":false,"nonFlagArgs":[],"notify":false,"notifyMode":"failure-change","onlyChanged":false,"onlyFailures":false,"openHandl
+esTimeout":1000,"passWithNoTests":false,"projects":[],"rootDir":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather","runTestsByPath":false,"seed":-1404293253,"
+skipFilter":false,"snapshotFormat":{"escapeString":false,"printBasicPrototype":false},"testFailureExitCode":1,"testPathPattern":"","testSequencer":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick
+-example-of-testing-in-nodejs\\node_modules\\@jest\\test-sequencer\\build\\index.js","updateSnapshot":"new","useStderr":false,"watch":false,"watchAll":false,"watchman":true,"workerThreads":false},"version":"29.
+7.0"}
+[1/30/2024, 1:31:19 PM] - [ERROR] - TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
+[1/30/2024, 1:31:19 PM] - [INFO] - Generating test case for the file weather\fetch-weather.js
+[1/30/2024, 1:31:19 PM] - [INTERNAL] - Executing the command: jest --showConfig with option {"cwd":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather"}
+[1/30/2024, 1:31:20 PM] - [INTERNAL] - Command: jest --showConfig with option {"cwd":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather"} Exited with code: 0
+Result: {
+  "configs": [
+    {
+      "automock": false,
+      "cache": true,
+      "cacheDirectory": "C:\\Users\\Taher Mandapwala\\AppData\\Local\\Temp\\jest",
+      "clearMocks": false,
+      "collectCoverageFrom": [],
+      "coverageDirectory": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather\\coverage",
+      "coveragePathIgnorePatterns": [
+        "\\\\node_modules\\\\"
+      ],
+      "cwd": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather",
+      "detectLeaks": false,
+      "detectOpenHandles": false,
+      "errorOnDeprecated": false,
+      "extensionsToTreatAsEsm": [],
+      "fakeTimers": {
+        "enableGlobally": false
+      },
+      "forceCoverageMatch": [],
+      "globals": {},
+      "haste": {
+        "computeSha1": false,
+        "enableSymlinks": false,
+        "forceNodeFilesystemAPI": true,
+        "throwOnModuleCollision": false
+      },
+      "id": "8a41f0f12bbfab67af8592677dfebd4c",
+      "injectGlobals": true,
+      "moduleDirectories": [
+        "node_modules"
+      ],
+      "moduleFileExtensions": [
+        "js",
+        "jsx",
+        "ts",
+        "tsx"
+      ],
+      "moduleNameMapper": [],
+      "modulePathIgnorePatterns": [],
+      "openHandlesTimeout": 1000,
+      "prettierPath": "prettier",
+      "resetMocks": false,
+      "resetModules": false,
+      "restoreMocks": false,
+      "rootDir": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather",
+      "roots": [
+        "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather"
+      ],
+      "runner": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\node_modules\\jest-runner\\build\\index.js",
+      "sandboxInjectedGlobals": [],
+      "setupFiles": [],
+      "setupFilesAfterEnv": [],
+      "skipFilter": false,
+      "slowTestThreshold": 5,
+      "snapshotFormat": {
+        "escapeString": false,
+        "printBasicPrototype": false
+      },
+      "snapshotSerializers": [],
+      "testEnvironment": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\node_modules\\jest-environment-node\\build\\index.js",
+      "testEnvironmentOptions": {},
+      "testLocationInResults": false,
+      "testMatch": [],
+      "testPathIgnorePatterns": [
+        "\\\\node_modules\\\\"
+      ],
+      "testRegex": [
+        "(\\\\__tests__\\\\.*|(.|\\\\)(test|spec)).(jsx?|tsx?)$"
+      ],
+      "testRunner": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\node_modules\\jest-circus\\runner.js",
+      "transform": [
+        [
+          "^.+.(jsx?|tsx?)$",
+          "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\node_modules\\babel-jest\\build\\index.js",
+          {}
+        ]
+      ],
+      "transformIgnorePatterns": [
+        "\\\\node_modules\\\\",
+        "\\.pnp\\.[^\\\\]+$"
+      ],
+      "watchPathIgnorePatterns": []
+    }
+  ],
+  "globalConfig": {
+    "bail": 0,
+    "changedFilesWithAncestor": false,
+    "ci": false,
+    "collectCoverage": false,
+    "collectCoverageFrom": [],
+    "coverageDirectory": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather\\coverage",
+    "coverageProvider": "babel",
+    "coverageReporters": [
+      "json",
+      "text",
+      "lcov",
+      "clover"
+    ],
+    "detectLeaks": false,
+    "detectOpenHandles": false,
+    "errorOnDeprecated": false,
+    "expand": false,
+    "findRelatedTests": false,
+    "forceExit": false,
+    "json": false,
+    "lastCommit": false,
+    "listTests": false,
+    "logHeapUsage": false,
+    "maxConcurrency": 5,
+    "maxWorkers": 7,
+    "noStackTrace": false,
+    "nonFlagArgs": [],
+    "notify": false,
+    "notifyMode": "failure-change",
+    "onlyChanged": false,
+    "onlyFailures": false,
+    "openHandlesTimeout": 1000,
+    "passWithNoTests": false,
+    "projects": [],
+    "rootDir": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather",
+    "runTestsByPath": false,
+    "seed": 1914739777,
+    "skipFilter": false,
+    "snapshotFormat": {
+      "escapeString": false,
+      "printBasicPrototype": false
+    },
+    "testFailureExitCode": 1,
+    "testPathPattern": "",
+    "testSequencer": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\node_modules\\@jest\\test-sequencer\\build\\index.js",
+    "updateSnapshot": "new",
+    "useStderr": false,
+    "watch": false,
+    "watchAll": false,
+    "watchman": true,
+    "workerThreads": false
+  },
+  "version": "29.7.0"
+}
+
+[1/30/2024, 1:31:20 PM] - [DEBUG] - {"configs":[{"automock":false,"cache":true,"cacheDirectory":"C:\\Users\\Taher Mandapwala\\AppData\\Local\\Temp\\jest","clearMocks":false,"collectCoverageFrom":[],"coverageDir
+ectory":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather\\coverage","coveragePathIgnorePatterns":["\\\\node_modules\\\\"],"cwd":"C:\\Users\\Taher Mandapwala\
+\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather","detectLeaks":false,"detectOpenHandles":false,"errorOnDeprecated":false,"extensionsToTreatAsEsm":[],"fakeTimers":{"enableGlobally":false
+},"forceCoverageMatch":[],"globals":{},"haste":{"computeSha1":false,"enableSymlinks":false,"forceNodeFilesystemAPI":true,"throwOnModuleCollision":false},"id":"8a41f0f12bbfab67af8592677dfebd4c","injectGlobals":t
+rue,"moduleDirectories":["node_modules"],"moduleFileExtensions":["js","jsx","ts","tsx"],"moduleNameMapper":[],"modulePathIgnorePatterns":[],"openHandlesTimeout":1000,"prettierPath":"prettier","resetMocks":false
+,"resetModules":false,"restoreMocks":false,"rootDir":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather","roots":["C:\\Users\\Taher Mandapwala\\go\\src\\github
+.com\\nodejs-quick-example-of-testing-in-nodejs\\weather"],"runner":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\node_modules\\jest-runner\\build\\index.js","san
+dboxInjectedGlobals":[],"setupFiles":[],"setupFilesAfterEnv":[],"skipFilter":false,"slowTestThreshold":5,"snapshotFormat":{"escapeString":false,"printBasicPrototype":false},"snapshotSerializers":[],"testEnviron
+ment":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\node_modules\\jest-environment-node\\build\\index.js","testEnvironmentOptions":{},"testLocationInResults":fals
+e,"testMatch":[],"testPathIgnorePatterns":["\\\\node_modules\\\\"],"testRegex":["(\\\\__tests__\\\\.*|(.|\\\\)(test|spec)).(jsx?|tsx?)$"],"testRunner":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-q
+uick-example-of-testing-in-nodejs\\node_modules\\jest-circus\\runner.js","transform":[["^.+.(jsx?|tsx?)$","C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\node_modul
+es\\babel-jest\\build\\index.js",{}]],"transformIgnorePatterns":["\\\\node_modules\\\\","\\.pnp\\.[^\\\\]+$"],"watchPathIgnorePatterns":[]}],"globalConfig":{"bail":0,"changedFilesWithAncestor":false,"ci":false,
+"collectCoverage":false,"collectCoverageFrom":[],"coverageDirectory":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather\\coverage","coverageProvider":"babel","
+coverageReporters":["json","text","lcov","clover"],"detectLeaks":false,"detectOpenHandles":false,"errorOnDeprecated":false,"expand":false,"findRelatedTests":false,"forceExit":false,"json":false,"lastCommit":fal
+se,"listTests":false,"logHeapUsage":false,"maxConcurrency":5,"maxWorkers":7,"noStackTrace":false,"nonFlagArgs":[],"notify":false,"notifyMode":"failure-change","onlyChanged":false,"onlyFailures":false,"openHandl
+esTimeout":1000,"passWithNoTests":false,"projects":[],"rootDir":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather","runTestsByPath":false,"seed":1914739777,"s
+kipFilter":false,"snapshotFormat":{"escapeString":false,"printBasicPrototype":false},"testFailureExitCode":1,"testPathPattern":"","testSequencer":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-
+example-of-testing-in-nodejs\\node_modules\\@jest\\test-sequencer\\build\\index.js","updateSnapshot":"new","useStderr":false,"watch":false,"watchAll":false,"watchman":true,"workerThreads":false},"version":"29.7
+.0"}
+[1/30/2024, 1:31:20 PM] - [ERROR] - TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
+[1/30/2024, 1:31:20 PM] - [INFO] - Generating test case for the file weather\prepared-for-the-weather.js
+[1/30/2024, 1:31:20 PM] - [INTERNAL] - Executing the command: jest --showConfig with option {"cwd":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather"}
+[1/30/2024, 1:31:21 PM] - [INTERNAL] - Command: jest --showConfig with option {"cwd":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather"} Exited with code: 0
+Result: {
+  "configs": [
+    {
+      "automock": false,
+      "cache": true,
+      "cacheDirectory": "C:\\Users\\Taher Mandapwala\\AppData\\Local\\Temp\\jest",
+      "clearMocks": false,
+      "collectCoverageFrom": [],
+      "coverageDirectory": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather\\coverage",
+      "coveragePathIgnorePatterns": [
+        "\\\\node_modules\\\\"
+      ],
+      "cwd": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather",
+      "detectLeaks": false,
+      "detectOpenHandles": false,
+      "errorOnDeprecated": false,
+      "extensionsToTreatAsEsm": [],
+      "fakeTimers": {
+        "enableGlobally": false
+      },
+      "forceCoverageMatch": [],
+      "globals": {},
+      "haste": {
+        "computeSha1": false,
+        "enableSymlinks": false,
+        "forceNodeFilesystemAPI": true,
+        "throwOnModuleCollision": false
+      },
+      "id": "8a41f0f12bbfab67af8592677dfebd4c",
+      "injectGlobals": true,
+      "moduleDirectories": [
+        "node_modules"
+      ],
+      "moduleFileExtensions": [
+        "js",
+        "jsx",
+        "ts",
+        "tsx"
+      ],
+      "moduleNameMapper": [],
+      "modulePathIgnorePatterns": [],
+      "openHandlesTimeout": 1000,
+      "prettierPath": "prettier",
+      "resetMocks": false,
+      "resetModules": false,
+      "restoreMocks": false,
+      "rootDir": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather",
+      "roots": [
+        "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather"
+      ],
+      "runner": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\node_modules\\jest-runner\\build\\index.js",
+      "sandboxInjectedGlobals": [],
+      "setupFiles": [],
+      "setupFilesAfterEnv": [],
+      "skipFilter": false,
+      "slowTestThreshold": 5,
+      "snapshotFormat": {
+        "escapeString": false,
+        "printBasicPrototype": false
+      },
+      "snapshotSerializers": [],
+      "testEnvironment": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\node_modules\\jest-environment-node\\build\\index.js",
+      "testEnvironmentOptions": {},
+      "testLocationInResults": false,
+      "testMatch": [],
+      "testPathIgnorePatterns": [
+        "\\\\node_modules\\\\"
+      ],
+      "testRegex": [
+        "(\\\\__tests__\\\\.*|(.|\\\\)(test|spec)).(jsx?|tsx?)$"
+      ],
+      "testRunner": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\node_modules\\jest-circus\\runner.js",
+      "transform": [
+        [
+          "^.+.(jsx?|tsx?)$",
+          "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\node_modules\\babel-jest\\build\\index.js",
+          {}
+        ]
+      ],
+      "transformIgnorePatterns": [
+        "\\\\node_modules\\\\",
+        "\\.pnp\\.[^\\\\]+$"
+      ],
+      "watchPathIgnorePatterns": []
+    }
+  ],
+  "globalConfig": {
+    "bail": 0,
+    "changedFilesWithAncestor": false,
+    "ci": false,
+    "collectCoverage": false,
+    "collectCoverageFrom": [],
+    "coverageDirectory": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather\\coverage",
+    "coverageProvider": "babel",
+    "coverageReporters": [
+      "json",
+      "text",
+      "lcov",
+      "clover"
+    ],
+    "detectLeaks": false,
+    "detectOpenHandles": false,
+    "errorOnDeprecated": false,
+    "expand": false,
+    "findRelatedTests": false,
+    "forceExit": false,
+    "json": false,
+    "lastCommit": false,
+    "listTests": false,
+    "logHeapUsage": false,
+    "maxConcurrency": 5,
+    "maxWorkers": 7,
+    "noStackTrace": false,
+    "nonFlagArgs": [],
+    "notify": false,
+    "notifyMode": "failure-change",
+    "onlyChanged": false,
+    "onlyFailures": false,
+    "openHandlesTimeout": 1000,
+    "passWithNoTests": false,
+    "projects": [],
+    "rootDir": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather",
+    "runTestsByPath": false,
+    "seed": 628814213,
+    "skipFilter": false,
+    "snapshotFormat": {
+      "escapeString": false,
+      "printBasicPrototype": false
+    },
+    "testFailureExitCode": 1,
+    "testPathPattern": "",
+    "testSequencer": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\node_modules\\@jest\\test-sequencer\\build\\index.js",
+    "updateSnapshot": "new",
+    "useStderr": false,
+    "watch": false,
+    "watchAll": false,
+    "watchman": true,
+    "workerThreads": false
+  },
+  "version": "29.7.0"
+}
+
+[1/30/2024, 1:31:21 PM] - [DEBUG] - {"configs":[{"automock":false,"cache":true,"cacheDirectory":"C:\\Users\\Taher Mandapwala\\AppData\\Local\\Temp\\jest","clearMocks":false,"collectCoverageFrom":[],"coverageDir
+ectory":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather\\coverage","coveragePathIgnorePatterns":["\\\\node_modules\\\\"],"cwd":"C:\\Users\\Taher Mandapwala\
+\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather","detectLeaks":false,"detectOpenHandles":false,"errorOnDeprecated":false,"extensionsToTreatAsEsm":[],"fakeTimers":{"enableGlobally":false
+},"forceCoverageMatch":[],"globals":{},"haste":{"computeSha1":false,"enableSymlinks":false,"forceNodeFilesystemAPI":true,"throwOnModuleCollision":false},"id":"8a41f0f12bbfab67af8592677dfebd4c","injectGlobals":t
+rue,"moduleDirectories":["node_modules"],"moduleFileExtensions":["js","jsx","ts","tsx"],"moduleNameMapper":[],"modulePathIgnorePatterns":[],"openHandlesTimeout":1000,"prettierPath":"prettier","resetMocks":false
+,"resetModules":false,"restoreMocks":false,"rootDir":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather","roots":["C:\\Users\\Taher Mandapwala\\go\\src\\github
+.com\\nodejs-quick-example-of-testing-in-nodejs\\weather"],"runner":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\node_modules\\jest-runner\\build\\index.js","san
+dboxInjectedGlobals":[],"setupFiles":[],"setupFilesAfterEnv":[],"skipFilter":false,"slowTestThreshold":5,"snapshotFormat":{"escapeString":false,"printBasicPrototype":false},"snapshotSerializers":[],"testEnviron
+ment":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\node_modules\\jest-environment-node\\build\\index.js","testEnvironmentOptions":{},"testLocationInResults":fals
+e,"testMatch":[],"testPathIgnorePatterns":["\\\\node_modules\\\\"],"testRegex":["(\\\\__tests__\\\\.*|(.|\\\\)(test|spec)).(jsx?|tsx?)$"],"testRunner":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-q
+uick-example-of-testing-in-nodejs\\node_modules\\jest-circus\\runner.js","transform":[["^.+.(jsx?|tsx?)$","C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\node_modul
+es\\babel-jest\\build\\index.js",{}]],"transformIgnorePatterns":["\\\\node_modules\\\\","\\.pnp\\.[^\\\\]+$"],"watchPathIgnorePatterns":[]}],"globalConfig":{"bail":0,"changedFilesWithAncestor":false,"ci":false,
+"collectCoverage":false,"collectCoverageFrom":[],"coverageDirectory":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather\\coverage","coverageProvider":"babel","
+coverageReporters":["json","text","lcov","clover"],"detectLeaks":false,"detectOpenHandles":false,"errorOnDeprecated":false,"expand":false,"findRelatedTests":false,"forceExit":false,"json":false,"lastCommit":fal
+se,"listTests":false,"logHeapUsage":false,"maxConcurrency":5,"maxWorkers":7,"noStackTrace":false,"nonFlagArgs":[],"notify":false,"notifyMode":"failure-change","onlyChanged":false,"onlyFailures":false,"openHandl
+esTimeout":1000,"passWithNoTests":false,"projects":[],"rootDir":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather","runTestsByPath":false,"seed":628814213,"sk
+ipFilter":false,"snapshotFormat":{"escapeString":false,"printBasicPrototype":false},"testFailureExitCode":1,"testPathPattern":"","testSequencer":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-e
+xample-of-testing-in-nodejs\\node_modules\\@jest\\test-sequencer\\build\\index.js","updateSnapshot":"new","useStderr":false,"watch":false,"watchAll":false,"watchman":true,"workerThreads":false},"version":"29.7.
+0"}
+[1/30/2024, 1:31:21 PM] - [ERROR] - TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
+[1/30/2024, 1:31:21 PM] - [INFO] -
+        you can run them using the jest command.
+        By default, Jest will look for and run all test files in your project.
+        You can also specify specific test files or patterns to run.
+        Navigate to the output directory of your test project.
+        Here's the basic command structure:
+
+        jest <testFileName>
+[1/30/2024, 1:31:22 PM] - [ERROR] - Failed to send event to Amplitude: AxiosError: Request failed with status code 400
+[1/30/2024, 1:31:22 PM] - [INFO] - ====================================================================================================
+
+Taher Mandapwala@LAPTOP-JV636MDQ MINGW64 ~/go/src/github.com/ZB-io/roost-gpt/nodejs_implementation (ZBIO-4899-2)
+
+=======================================================================================================================================
+[1/30/2024, 1:31:19 PM] - [INFO] - Generating test case for the file weather\fetch-weather.js
+[1/30/2024, 1:31:19 PM] - [INTERNAL] - Executing the command: jest --showConfig with option {"cwd":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather"}
+[1/30/2024, 1:31:20 PM] - [INTERNAL] - Command: jest --showConfig with option {"cwd":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather"} Exited with code: 0
+Result: {
+  "configs": [
+    {
+      "automock": false,
+      "cache": true,
+      "cacheDirectory": "C:\\Users\\Taher Mandapwala\\AppData\\Local\\Temp\\jest",
+      "clearMocks": false,
+      "collectCoverageFrom": [],
+      "coverageDirectory": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather\\coverage",
+      "coveragePathIgnorePatterns": [
+        "\\\\node_modules\\\\"
+      ],
+      "cwd": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather",
+      "detectLeaks": false,
+      "detectOpenHandles": false,
+      "errorOnDeprecated": false,
+      "extensionsToTreatAsEsm": [],
+      "fakeTimers": {
+        "enableGlobally": false
+      },
+      "forceCoverageMatch": [],
+      "globals": {},
+      "haste": {
+        "computeSha1": false,
+        "enableSymlinks": false,
+        "forceNodeFilesystemAPI": true,
+        "throwOnModuleCollision": false
+      },
+      "id": "8a41f0f12bbfab67af8592677dfebd4c",
+      "injectGlobals": true,
+      "moduleDirectories": [
+        "node_modules"
+      ],
+      "moduleFileExtensions": [
+        "js",
+        "jsx",
+        "ts",
+        "tsx"
+      ],
+      "moduleNameMapper": [],
+      "modulePathIgnorePatterns": [],
+      "openHandlesTimeout": 1000,
+      "prettierPath": "prettier",
+      "resetMocks": false,
+      "resetModules": false,
+      "restoreMocks": false,
+      "rootDir": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather",
+      "roots": [
+        "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather"
+      ],
+      "runner": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\node_modules\\jest-runner\\build\\index.js",
+      "sandboxInjectedGlobals": [],
+      "setupFiles": [],
+      "setupFilesAfterEnv": [],
+      "skipFilter": false,
+      "slowTestThreshold": 5,
+      "snapshotFormat": {
+        "escapeString": false,
+        "printBasicPrototype": false
+      },
+      "snapshotSerializers": [],
+      "testEnvironment": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\node_modules\\jest-environment-node\\build\\index.js",
+      "testEnvironmentOptions": {},
+      "testLocationInResults": false,
+      "testMatch": [],
+      "testPathIgnorePatterns": [
+        "\\\\node_modules\\\\"
+      ],
+      "testRegex": [
+        "(\\\\__tests__\\\\.*|(.|\\\\)(test|spec)).(jsx?|tsx?)$"
+      ],
+      "testRunner": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\node_modules\\jest-circus\\runner.js",
+      "transform": [
+        [
+          "^.+.(jsx?|tsx?)$",
+          "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\node_modules\\babel-jest\\build\\index.js",
+          {}
+        ]
+      ],
+      "transformIgnorePatterns": [
+        "\\\\node_modules\\\\",
+        "\\.pnp\\.[^\\\\]+$"
+      ],
+      "watchPathIgnorePatterns": []
+    }
+  ],
+  "globalConfig": {
+    "bail": 0,
+    "changedFilesWithAncestor": false,
+    "ci": false,
+    "collectCoverage": false,
+    "collectCoverageFrom": [],
+    "coverageDirectory": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather\\coverage",
+    "coverageProvider": "babel",
+    "coverageReporters": [
+      "json",
+      "text",
+      "lcov",
+      "clover"
+    ],
+    "detectLeaks": false,
+    "detectOpenHandles": false,
+    "errorOnDeprecated": false,
+    "expand": false,
+    "findRelatedTests": false,
+    "forceExit": false,
+    "json": false,
+    "lastCommit": false,
+    "listTests": false,
+    "logHeapUsage": false,
+    "maxConcurrency": 5,
+    "maxWorkers": 7,
+    "noStackTrace": false,
+    "nonFlagArgs": [],
+    "notify": false,
+    "notifyMode": "failure-change",
+    "onlyChanged": false,
+    "onlyFailures": false,
+    "openHandlesTimeout": 1000,
+    "passWithNoTests": false,
+    "projects": [],
+    "rootDir": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather",
+    "runTestsByPath": false,
+    "seed": 1914739777,
+    "skipFilter": false,
+    "snapshotFormat": {
+      "escapeString": false,
+      "printBasicPrototype": false
+    },
+    "testFailureExitCode": 1,
+    "testPathPattern": "",
+    "testSequencer": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\node_modules\\@jest\\test-sequencer\\build\\index.js",
+    "updateSnapshot": "new",
+    "useStderr": false,
+    "watch": false,
+    "watchAll": false,
+    "watchman": true,
+    "workerThreads": false
+  },
+  "version": "29.7.0"
+}
+
+[1/30/2024, 1:31:20 PM] - [DEBUG] - {"configs":[{"automock":false,"cache":true,"cacheDirectory":"C:\\Users\\Taher Mandapwala\\AppData\\Local\\Temp\\jest","clearMocks":false,"collectCoverageFrom":[],"coverageDir
+ectory":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather\\coverage","coveragePathIgnorePatterns":["\\\\node_modules\\\\"],"cwd":"C:\\Users\\Taher Mandapwala\
+\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather","detectLeaks":false,"detectOpenHandles":false,"errorOnDeprecated":false,"extensionsToTreatAsEsm":[],"fakeTimers":{"enableGlobally":false
+},"forceCoverageMatch":[],"globals":{},"haste":{"computeSha1":false,"enableSymlinks":false,"forceNodeFilesystemAPI":true,"throwOnModuleCollision":false},"id":"8a41f0f12bbfab67af8592677dfebd4c","injectGlobals":t
+rue,"moduleDirectories":["node_modules"],"moduleFileExtensions":["js","jsx","ts","tsx"],"moduleNameMapper":[],"modulePathIgnorePatterns":[],"openHandlesTimeout":1000,"prettierPath":"prettier","resetMocks":false
+,"resetModules":false,"restoreMocks":false,"rootDir":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather","roots":["C:\\Users\\Taher Mandapwala\\go\\src\\github
+.com\\nodejs-quick-example-of-testing-in-nodejs\\weather"],"runner":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\node_modules\\jest-runner\\build\\index.js","san
+dboxInjectedGlobals":[],"setupFiles":[],"setupFilesAfterEnv":[],"skipFilter":false,"slowTestThreshold":5,"snapshotFormat":{"escapeString":false,"printBasicPrototype":false},"snapshotSerializers":[],"testEnviron
+ment":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\node_modules\\jest-environment-node\\build\\index.js","testEnvironmentOptions":{},"testLocationInResults":fals
+e,"testMatch":[],"testPathIgnorePatterns":["\\\\node_modules\\\\"],"testRegex":["(\\\\__tests__\\\\.*|(.|\\\\)(test|spec)).(jsx?|tsx?)$"],"testRunner":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-q
+uick-example-of-testing-in-nodejs\\node_modules\\jest-circus\\runner.js","transform":[["^.+.(jsx?|tsx?)$","C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\node_modul
+es\\babel-jest\\build\\index.js",{}]],"transformIgnorePatterns":["\\\\node_modules\\\\","\\.pnp\\.[^\\\\]+$"],"watchPathIgnorePatterns":[]}],"globalConfig":{"bail":0,"changedFilesWithAncestor":false,"ci":false,
+"collectCoverage":false,"collectCoverageFrom":[],"coverageDirectory":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather\\coverage","coverageProvider":"babel","
+coverageReporters":["json","text","lcov","clover"],"detectLeaks":false,"detectOpenHandles":false,"errorOnDeprecated":false,"expand":false,"findRelatedTests":false,"forceExit":false,"json":false,"lastCommit":fal
+se,"listTests":false,"logHeapUsage":false,"maxConcurrency":5,"maxWorkers":7,"noStackTrace":false,"nonFlagArgs":[],"notify":false,"notifyMode":"failure-change","onlyChanged":false,"onlyFailures":false,"openHandl
+esTimeout":1000,"passWithNoTests":false,"projects":[],"rootDir":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather","runTestsByPath":false,"seed":1914739777,"s
+kipFilter":false,"snapshotFormat":{"escapeString":false,"printBasicPrototype":false},"testFailureExitCode":1,"testPathPattern":"","testSequencer":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-
+example-of-testing-in-nodejs\\node_modules\\@jest\\test-sequencer\\build\\index.js","updateSnapshot":"new","useStderr":false,"watch":false,"watchAll":false,"watchman":true,"workerThreads":false},"version":"29.7
+.0"}
+[1/30/2024, 1:31:20 PM] - [ERROR] - TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
+[1/30/2024, 1:31:20 PM] - [INFO] - Generating test case for the file weather\prepared-for-the-weather.js
+[1/30/2024, 1:31:20 PM] - [INTERNAL] - Executing the command: jest --showConfig with option {"cwd":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather"}
+[1/30/2024, 1:31:21 PM] - [INTERNAL] - Command: jest --showConfig with option {"cwd":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather"} Exited with code: 0
+Result: {
+  "configs": [
+    {
+      "automock": false,
+      "cache": true,
+      "cacheDirectory": "C:\\Users\\Taher Mandapwala\\AppData\\Local\\Temp\\jest",
+      "clearMocks": false,
+      "collectCoverageFrom": [],
+      "coverageDirectory": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather\\coverage",
+      "coveragePathIgnorePatterns": [
+        "\\\\node_modules\\\\"
+      ],
+      "cwd": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather",
+      "detectLeaks": false,
+      "detectOpenHandles": false,
+      "errorOnDeprecated": false,
+      "extensionsToTreatAsEsm": [],
+      "fakeTimers": {
+        "enableGlobally": false
+      },
+      "forceCoverageMatch": [],
+      "globals": {},
+      "haste": {
+        "computeSha1": false,
+        "enableSymlinks": false,
+        "forceNodeFilesystemAPI": true,
+        "throwOnModuleCollision": false
+      },
+      "id": "8a41f0f12bbfab67af8592677dfebd4c",
+      "injectGlobals": true,
+      "moduleDirectories": [
+        "node_modules"
+      ],
+      "moduleFileExtensions": [
+        "js",
+        "jsx",
+        "ts",
+        "tsx"
+      ],
+      "moduleNameMapper": [],
+      "modulePathIgnorePatterns": [],
+      "openHandlesTimeout": 1000,
+      "prettierPath": "prettier",
+      "resetMocks": false,
+      "resetModules": false,
+      "restoreMocks": false,
+      "rootDir": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather",
+      "roots": [
+        "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather"
+      ],
+      "runner": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\node_modules\\jest-runner\\build\\index.js",
+      "sandboxInjectedGlobals": [],
+      "setupFiles": [],
+      "setupFilesAfterEnv": [],
+      "skipFilter": false,
+      "slowTestThreshold": 5,
+      "snapshotFormat": {
+        "escapeString": false,
+        "printBasicPrototype": false
+      },
+      "snapshotSerializers": [],
+      "testEnvironment": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\node_modules\\jest-environment-node\\build\\index.js",
+      "testEnvironmentOptions": {},
+      "testLocationInResults": false,
+      "testMatch": [],
+      "testPathIgnorePatterns": [
+        "\\\\node_modules\\\\"
+      ],
+      "testRegex": [
+        "(\\\\__tests__\\\\.*|(.|\\\\)(test|spec)).(jsx?|tsx?)$"
+      ],
+      "testRunner": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\node_modules\\jest-circus\\runner.js",
+      "transform": [
+        [
+          "^.+.(jsx?|tsx?)$",
+          "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\node_modules\\babel-jest\\build\\index.js",
+          {}
+        ]
+      ],
+      "transformIgnorePatterns": [
+        "\\\\node_modules\\\\",
+        "\\.pnp\\.[^\\\\]+$"
+      ],
+      "watchPathIgnorePatterns": []
+    }
+  ],
+  "globalConfig": {
+    "bail": 0,
+    "changedFilesWithAncestor": false,
+    "ci": false,
+    "collectCoverage": false,
+    "collectCoverageFrom": [],
+    "coverageDirectory": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather\\coverage",
+    "coverageProvider": "babel",
+    "coverageReporters": [
+      "json",
+      "text",
+      "lcov",
+      "clover"
+    ],
+    "detectLeaks": false,
+    "detectOpenHandles": false,
+    "errorOnDeprecated": false,
+    "expand": false,
+    "findRelatedTests": false,
+    "forceExit": false,
+    "json": false,
+    "lastCommit": false,
+    "listTests": false,
+    "logHeapUsage": false,
+    "maxConcurrency": 5,
+    "maxWorkers": 7,
+    "noStackTrace": false,
+    "nonFlagArgs": [],
+    "notify": false,
+    "notifyMode": "failure-change",
+    "onlyChanged": false,
+    "onlyFailures": false,
+    "openHandlesTimeout": 1000,
+    "passWithNoTests": false,
+    "projects": [],
+    "rootDir": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather",
+    "runTestsByPath": false,
+    "seed": 628814213,
+    "skipFilter": false,
+    "snapshotFormat": {
+      "escapeString": false,
+      "printBasicPrototype": false
+    },
+    "testFailureExitCode": 1,
+    "testPathPattern": "",
+    "testSequencer": "C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\node_modules\\@jest\\test-sequencer\\build\\index.js",
+    "updateSnapshot": "new",
+    "useStderr": false,
+    "watch": false,
+    "watchAll": false,
+    "watchman": true,
+    "workerThreads": false
+  },
+  "version": "29.7.0"
+}
+
+[1/30/2024, 1:31:21 PM] - [DEBUG] - {"configs":[{"automock":false,"cache":true,"cacheDirectory":"C:\\Users\\Taher Mandapwala\\AppData\\Local\\Temp\\jest","clearMocks":false,"collectCoverageFrom":[],"coverageDir
+ectory":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather\\coverage","coveragePathIgnorePatterns":["\\\\node_modules\\\\"],"cwd":"C:\\Users\\Taher Mandapwala\
+\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather","detectLeaks":false,"detectOpenHandles":false,"errorOnDeprecated":false,"extensionsToTreatAsEsm":[],"fakeTimers":{"enableGlobally":false
+},"forceCoverageMatch":[],"globals":{},"haste":{"computeSha1":false,"enableSymlinks":false,"forceNodeFilesystemAPI":true,"throwOnModuleCollision":false},"id":"8a41f0f12bbfab67af8592677dfebd4c","injectGlobals":t
+rue,"moduleDirectories":["node_modules"],"moduleFileExtensions":["js","jsx","ts","tsx"],"moduleNameMapper":[],"modulePathIgnorePatterns":[],"openHandlesTimeout":1000,"prettierPath":"prettier","resetMocks":false
+,"resetModules":false,"restoreMocks":false,"rootDir":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather","roots":["C:\\Users\\Taher Mandapwala\\go\\src\\github
+.com\\nodejs-quick-example-of-testing-in-nodejs\\weather"],"runner":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\node_modules\\jest-runner\\build\\index.js","san
+dboxInjectedGlobals":[],"setupFiles":[],"setupFilesAfterEnv":[],"skipFilter":false,"slowTestThreshold":5,"snapshotFormat":{"escapeString":false,"printBasicPrototype":false},"snapshotSerializers":[],"testEnviron
+ment":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\node_modules\\jest-environment-node\\build\\index.js","testEnvironmentOptions":{},"testLocationInResults":fals
+e,"testMatch":[],"testPathIgnorePatterns":["\\\\node_modules\\\\"],"testRegex":["(\\\\__tests__\\\\.*|(.|\\\\)(test|spec)).(jsx?|tsx?)$"],"testRunner":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-q
+uick-example-of-testing-in-nodejs\\node_modules\\jest-circus\\runner.js","transform":[["^.+.(jsx?|tsx?)$","C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\node_modul
+es\\babel-jest\\build\\index.js",{}]],"transformIgnorePatterns":["\\\\node_modules\\\\","\\.pnp\\.[^\\\\]+$"],"watchPathIgnorePatterns":[]}],"globalConfig":{"bail":0,"changedFilesWithAncestor":false,"ci":false,
+"collectCoverage":false,"collectCoverageFrom":[],"coverageDirectory":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather\\coverage","coverageProvider":"babel","
+coverageReporters":["json","text","lcov","clover"],"detectLeaks":false,"detectOpenHandles":false,"errorOnDeprecated":false,"expand":false,"findRelatedTests":false,"forceExit":false,"json":false,"lastCommit":fal
+se,"listTests":false,"logHeapUsage":false,"maxConcurrency":5,"maxWorkers":7,"noStackTrace":false,"nonFlagArgs":[],"notify":false,"notifyMode":"failure-change","onlyChanged":false,"onlyFailures":false,"openHandl
+esTimeout":1000,"passWithNoTests":false,"projects":[],"rootDir":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-example-of-testing-in-nodejs\\weather","runTestsByPath":false,"seed":628814213,"sk
+ipFilter":false,"snapshotFormat":{"escapeString":false,"printBasicPrototype":false},"testFailureExitCode":1,"testPathPattern":"","testSequencer":"C:\\Users\\Taher Mandapwala\\go\\src\\github.com\\nodejs-quick-e
+xample-of-testing-in-nodejs\\node_modules\\@jest\\test-sequencer\\build\\index.js","updateSnapshot":"new","useStderr":false,"watch":false,"watchAll":false,"watchman":true,"workerThreads":false},"version":"29.7.
+0"}
+[1/30/2024, 1:31:21 PM] - [ERROR] - TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
+[1/30/2024, 1:31:21 PM] - [INFO] -
+        you can run them using the jest command.
+        By default, Jest will look for and run all test files in your project.
+        You can also specify specific test files or patterns to run.
+        Navigate to the output directory of your test project.
+        Here's the basic command structure:
+
+        jest <testFileName>
+[1/30/2024, 1:31:22 PM] - [ERROR] - Failed to send event to Amplitude: AxiosError: Request failed with status code 400
+[1/30/2024, 1:31:22 PM] - [INFO] - ====================================================================================================
