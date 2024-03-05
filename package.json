@@ -18,12 +18,12 @@
     "mochawesome": "^3.0.0",
     "mockery": "^2.1.0",
     "nock": "^13.5.1",
-    "sinon": "^4.1.3",
+    "sinon": "^4.5.0",
     "sinon-chai": "^3.7.0"
   },
   "dependencies": {
     "colors": "^1.1.2",
     "command-line-args": "^4.0.7",
-    "request": "^2.83.0"
+    "request": "^2.88.2"
   }
 }
