@@ -5,14 +5,17 @@
   "type": "module",
   "scripts": {
     "start": "node app.js",
-    "test": "jest",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest",
     "cover": "istanbul cover node_modules/mocha/bin/_mocha --dir ./reports/coverage"
   },
   "author": "Alicia <alicia@aliciasykes.com> (http://aliciasykes.com)",
   "license": "ISC",
   "devDependencies": {
+    "@babel/preset-env": "^7.26.0",
+    "babel-jest": "^29.7.0",
     "chai": "^4.1.2",
     "coffee-script": "^1.12.7",
+    "cross-env": "^7.0.3",
     "istanbul": "^1.1.0-alpha.1",
     "jest": "^29.7.0",
     "mocha": "^4.0.1",
@@ -26,5 +29,9 @@
     "colors": "^1.1.2",
     "command-line-args": "^4.0.7",
     "request": "^2.83.0"
+  },
+  "script": {
+    "0": "script",
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest"
   }
 }
